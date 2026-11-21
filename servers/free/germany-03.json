@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.86.147.80",
-            "port": 9444,
+            "address": "sv1.pirs.dev",
+            "port": 56789,
             "users": [
               {
-                "id": "e8b7b937-85d9-43f3-bb7a-7d98478756d7",
+                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "keshyou.mcufa.pro",
+          "serverName": "sv1.pirs.dev",
           "fingerprint": "firefox",
-          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
-          "shortId": "",
+          "publicKey": "3MrvU0V-wv_lZtWav3cpm7QgjvirSq4LMk2_S4OHD30",
+          "shortId": "a1b2c3d4e5f6749a",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия | Обход №2"
+  "remarks": "🇩🇪 Германия №3"
 }
