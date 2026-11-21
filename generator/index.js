@@ -624,6 +624,7 @@ async function run() {
     console.warn("ВНИМАНИЕ: Xray не найден, серверы НЕ проверяются на работоспособность.");
   } else {
     console.log(`Проверка через xray: ответили=${geoStats.xrayOk}, не ответили=${geoStats.xrayFail}, не проверено (лимит времени)=${geoStats.unchecked}, DNS-отказ=${geoStats.dnsBad}, из РФ: подтверждено=${geoStats.ruOk} (кэш ${geoStats.ruCached}), заблокировано=${geoStats.ruBlocked}, без ответа API=${geoStats.ruUnknown}`);
+    if (geoStats.recovered || geoStats.ruOnly || geoStats.deadEverywhere) console.log(`Повторная проверка вернула серверов: ${geoStats.recovered}. Из оставшихся неработающих через РФ: работают напрямую из GitHub (блок из РФ): ${geoStats.ruOnly}, не работают нигде: ${geoStats.deadEverywhere}.`);
     if (geoStats.directIp === null) console.warn("IP раннера не определён: проверка «трафик действительно проксируется» пропущена.");
     const failedNodes = geo.map((g, i) => ({ g, node: sourceNodes[i] })).filter((x) => x.g.reachable === false);
     for (const { g, node } of failedNodes.slice(0, 40)) console.log(`  ✗ ${String(node.name || g.host).slice(0, 50)} — ${g.checkError}${g.drop ? " [убран]" : " [оставлен: был рабочим]"}`);
