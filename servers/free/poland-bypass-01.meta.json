@@ -1,6 +1,6 @@
 {
   "id": "poland-bypass-01",
-  "name": "🇵🇱 Польша | Обход №4",
+  "name": "🇵🇱 Польша | Обход №5",
   "country": "PL",
   "tier": "free",
   "kind": "bypass",
@@ -8,9 +8,9 @@
   "auto": true,
   "generatedBy": "upstream",
   "geoSource": "exit",
-  "sourceHash": "d187b65877c94bb500e780697352725ab16a4570bdf32ff3005dd385f51d947b",
-  "latency": 241,
+  "sourceHash": "cc59251cac952912a44b85e024e1e2548d0165df3357219f6bd6e6d128bb0e2b",
+  "latency": 225,
   "reachable": true,
-  "bypassNumber": 4,
+  "bypassNumber": 5,
   "source": 1
 }

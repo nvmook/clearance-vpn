@@ -279,26 +279,28 @@
       "settings": {
         "vnext": [
           {
-            "address": "newerson.online",
-            "port": 443,
+            "address": "84.23.52.104",
+            "port": 9096,
             "users": [
               {
-                "id": "37fc45b0-be4d-4920-a0f7-7389e406f5f3",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "d81db550-4787-467e-b98a-579ee9d41999",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "grpc",
         "security": "reality",
+        "grpcSettings": {
+          "serviceName": "inetgrpc"
+        },
         "realitySettings": {
-          "serverName": "newerson.online",
+          "serverName": "p2g.84-23-52-104.sslip.io",
           "fingerprint": "edge",
-          "publicKey": "TiKF_6UGMtWhgDiAGLsAtyYwyv-s3HxG6F0P9ltyf1U",
-          "shortId": "8888265ef63fba6d",
+          "publicKey": "JASBooze12B0nAaLU2QMWkeAqXwh4GmhfPD_O9YteT0",
+          "shortId": "6ba85179e30d4fc2",
           "spiderX": "/"
         }
       },

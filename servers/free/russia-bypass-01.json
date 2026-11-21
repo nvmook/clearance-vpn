@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "153.52.128.106",
-            "port": 443,
+            "address": "109.107.189.69",
+            "port": 8443,
             "users": [
               {
-                "id": "25d272c1-037b-4f95-8f5c-c4fd566a6d8c",
+                "id": "cfd6ce74-f4c5-4815-bba4-2fd0fa77bf4e",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "pebble-terrace.justext.space",
+          "serverName": "gw-721bd5.dobry.monster",
           "fingerprint": "firefox",
-          "publicKey": "AH8E2UtnifgXcpkqC9P9UZ6lOLMwl4KBetLjS4dp1wc",
-          "shortId": "03a55323",
+          "publicKey": "q1EhO97gyUBlF7LiAfeAESI0O2Mg95T4yIk7keOnMEE",
+          "shortId": "0912cc7f28aa26ba",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇦🇲 Армения | Обход №3"
+  "remarks": "🇷🇺 Россия | Обход №7"
 }
