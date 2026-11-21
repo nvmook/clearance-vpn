@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "178.248.236.229",
-            "port": 443,
+            "address": "185.86.147.80",
+            "port": 9444,
             "users": [
               {
-                "id": "a71d6c6d-c95e-4ec1-a892-22e21733bf09",
+                "id": "e8b7b937-85d9-43f3-bb7a-7d98478756d7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "144.hexdey.com",
+          "serverName": "keshyou.mcufa.pro",
           "fingerprint": "firefox",
-          "publicKey": "_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0",
-          "shortId": "d05a120d3506d2cc",
+          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "shortId": "",
           "spiderX": "/"
         }
       },

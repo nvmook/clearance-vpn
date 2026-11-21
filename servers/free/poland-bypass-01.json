@@ -279,26 +279,28 @@
       "settings": {
         "vnext": [
           {
-            "address": "144.31.5.137",
-            "port": 443,
+            "address": "84.23.52.104",
+            "port": 9079,
             "users": [
               {
-                "id": "78a2cdf1-22e5-4ad7-bf89-91aa13d8b76c",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "d81db550-4787-467e-b98a-579ee9d41999",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "grpc",
         "security": "reality",
+        "grpcSettings": {
+          "serviceName": "inetgrpc"
+        },
         "realitySettings": {
-          "serverName": "se.dataroute.biz",
+          "serverName": "by.84-23-52-104.sslip.io",
           "fingerprint": "firefox",
-          "publicKey": "Jg9VG2d5YKA_b6b2oVT8_QaIEHyww04U050ahEPhZlU",
-          "shortId": "",
+          "publicKey": "V1ifE7iJ4ITZfA10PNaR7fF7Lz1E_9v7a9S4jPOY-A8",
+          "shortId": "069074d6fbb09e56",
           "spiderX": "/"
         }
       },
@@ -317,5 +319,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇵🇱 Польша | Обход №4"
+  "remarks": "🇵🇱 Польша | Обход №5"
 }

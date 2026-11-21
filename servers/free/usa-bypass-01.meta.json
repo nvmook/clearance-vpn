@@ -1,0 +1,16 @@
+{
+  "id": "usa-bypass-01",
+  "name": "🇺🇸 США | Обход №8",
+  "country": "US",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "715c5493e97e7412fb5010235fba465fa68a89fbdd8ed9ce03fa18e6047b3c40",
+  "latency": 296,
+  "reachable": true,
+  "bypassNumber": 8,
+  "source": 1
+}
