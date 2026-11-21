@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "177.3.209.122",
-            "port": 36443,
+            "address": "console.session.stream-stars.org",
+            "port": 443,
             "users": [
               {
-                "id": "d3eeebec-d7ba-4695-a1ea-2f2407c86582",
+                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
                 "encryption": "none"
               }
             ]
@@ -291,18 +291,20 @@
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
-        "security": "reality",
-        "xhttpSettings": {
-          "path": "/assets/d2a0752e84654859fbd76eeed1901292",
-          "mode": "auto"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/gateway/v1/ws/9ade28ee7194ca0b153a7676dd4ca912",
+          "headers": {
+            "Host": "console.session.stream-stars.org"
+          }
         },
-        "realitySettings": {
-          "serverName": "static-se.snobmenu.xyz",
-          "fingerprint": "firefox",
-          "publicKey": "N-uJSEyk-n_rfnJUJXorw6vdHBn8buRapPty6O2rRy4",
-          "shortId": "12628dbd45f29a78",
-          "spiderX": "/"
+        "tlsSettings": {
+          "serverName": "console.session.stream-stars.org",
+          "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"
@@ -320,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇮 Финляндия №1"
+  "remarks": "🇳🇱 Нидерланды | Обход №13"
 }

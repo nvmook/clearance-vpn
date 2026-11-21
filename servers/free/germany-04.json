@@ -279,26 +279,29 @@
       "settings": {
         "vnext": [
           {
-            "address": "sv2.pirs.dev",
-            "port": 56789,
+            "address": "195.226.93.224",
+            "port": 443,
             "users": [
               {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ad295072-0049-4981-a9aa-6314c43e87e5",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "xhttp",
         "security": "reality",
+        "xhttpSettings": {
+          "path": "/",
+          "mode": "auto"
+        },
         "realitySettings": {
-          "serverName": "sv2.pirs.dev",
+          "serverName": "n2.fernstatic.com",
           "fingerprint": "firefox",
-          "publicKey": "Fm7zPmgYWSuKjy_pf8HFEcf7Bewn_lj86eRnm0C-NQE",
-          "shortId": "a1b2c3d4e5f6349a",
+          "publicKey": "xRIN4AZSp2c_yaCurN9DNoh0q8zSj-AlMCflpb1pwBA",
+          "shortId": "00a9d4acc75cf31c",
           "spiderX": "/"
         }
       },

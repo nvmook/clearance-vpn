@@ -1,0 +1,16 @@
+{
+  "id": "finland-bypass-01",
+  "name": "🇫🇮 Финляндия | Обход №6",
+  "country": "FI",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "92bc3181fe0509c49f916efb5744e3e04b6f4f5c3efc7ab488ce62b304eef1e0",
+  "latency": 221,
+  "reachable": true,
+  "bypassNumber": 6,
+  "source": 1
+}

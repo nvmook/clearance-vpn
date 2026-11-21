@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "168.113.253.178",
+            "address": "console.session.stream-stars.org",
             "port": 443,
             "users": [
               {
-                "id": "d6d40100-9442-0001-b5b9-6d259318c421",
+                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
                 "encryption": "none"
               }
             ]
@@ -291,13 +291,18 @@
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "ws",
         "security": "tls",
+        "wsSettings": {
+          "path": "/gateway/v1/ws/0aa40b9976050352f92a41203aaf6661",
+          "headers": {
+            "Host": "console.session.stream-stars.org"
+          }
+        },
         "tlsSettings": {
-          "serverName": "uzndiuvzvqqljdyhzs.fcloudservices.site",
-          "fingerprint": "chrome",
+          "serverName": "console.session.stream-stars.org",
+          "fingerprint": "edge",
           "alpn": [
-            "h2",
             "http/1.1"
           ]
         }
@@ -317,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇨🇦 Канада №1"
+  "remarks": "🇬🇧 Великобритания | Обход №11"
 }

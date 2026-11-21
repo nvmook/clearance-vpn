@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "94.183.164.68",
+            "address": "176.108.243.24",
             "port": 443,
             "users": [
               {
-                "id": "4f2de292-cafe-4a5a-80cc-742a957ca43c",
+                "id": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "dogklinik.growmart.site",
+          "serverName": "sbmicro740.gangtype.com",
           "fingerprint": "firefox",
-          "publicKey": "ju1YyCfbO_sLy_LZK6G7DbHpR8hhmSc4SaOLLbjuGSE",
-          "shortId": "cd9c321977831739",
+          "publicKey": "QMPA4RVilYFEnDrbdj93up66oDk5I_btjil9vC7ppgc",
+          "shortId": "9e5b8e221733245f",
           "spiderX": "/"
         }
       },

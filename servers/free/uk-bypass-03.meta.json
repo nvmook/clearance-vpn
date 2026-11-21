@@ -1,0 +1,16 @@
+{
+  "id": "uk-bypass-03",
+  "name": "🇬🇧 Великобритания | Обход №12",
+  "country": "GB",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "1fbfcb2ef841611d29b3a3a2fe2b39dc7d03db1f23173d902ed5dab6f9f5e006",
+  "latency": 269,
+  "reachable": true,
+  "bypassNumber": 12,
+  "source": 5
+}

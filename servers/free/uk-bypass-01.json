@@ -279,27 +279,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "13.143.187.220",
+            "address": "185.229.9.167",
             "port": 443,
             "users": [
               {
-                "id": "66c78912-4e2d-41dc-8742-aaae2590804e",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "01af0e3b-a83f-4a15-9c4b-0deaadc8c7b7",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "fi-s1.kadrhub.tech",
-          "fingerprint": "firefox",
-          "publicKey": "eDzVz3bxkv3IoN3BUCa_aA-RicoeG7ACylYSnmS2Pgg",
-          "shortId": "",
-          "spiderX": "/"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/api/v1/events",
+          "headers": {
+            "Host": "dh.veliknat.band"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "dh.veliknat.band",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"
@@ -317,5 +323,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇮 Финляндия №2"
+  "remarks": "🇬🇧 Великобритания | Обход №1"
 }
