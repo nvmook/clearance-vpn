@@ -176,7 +176,15 @@ const HEALTH_DEFAULTS = {
   directIpUrl: "https://www.cloudflare.com/cdn-cgi/trace",
   dns: { enabled: true, globalServers: ["1.1.1.1", "8.8.8.8"], ruServers: ["77.88.8.8", "77.88.8.1"], timeoutMs: 3000 },
   ruProbe: { enabled: true, required: false, maxNodes: 3, minOk: 1, concurrency: 2, pollMs: 2000, waitMs: 30000, budgetMs: 240000, ttlMs: 2 * 60 * 60 * 1000 },
+  // "strict": bypass ("Обход"/"Глушилка") servers are checked like all others.
+  // "direct": they are checked directly from the runner, not through the Russian hop
+  //           (a datacenter hop is not a mobile whitelist network).
+  // "ru": skipped here, confirmed only by the check-host.net Russian nodes.
   bypassPolicy: "strict",
+  // A server that failed is checked once more (a few at a time, after a pause) so that a
+  // momentary overload of the hop does not remove a good server; if it still fails it is
+  // also probed directly to tell "blocked from Russia" from "dead everywhere".
+  retry: { enabled: true, concurrency: 2, delayMs: 3000, diagnose: true },
   tests: DEFAULT_HEALTH_TESTS
 };
 
@@ -185,6 +193,7 @@ export function healthConfig(h = {}) {
     ...HEALTH_DEFAULTS, ...h,
     keepAlive: { ...HEALTH_DEFAULTS.keepAlive, ...(h.keepAlive || {}) },
     tunnel: { ...HEALTH_DEFAULTS.tunnel, ...(h.tunnel || {}) },
+    retry: { ...HEALTH_DEFAULTS.retry, ...(h.retry || {}) },
     transfer: { ...HEALTH_DEFAULTS.transfer, ...(h.transfer || {}) },
     dns: { ...HEALTH_DEFAULTS.dns, ...(h.dns || {}) },
     ruProbe: { ...HEALTH_DEFAULTS.ruProbe, ...(h.ruProbe || {}) }
@@ -623,7 +632,7 @@ export async function resolveGeo(nodes, { cacheFile, overridesFile, tlsOptions, 
   const deadAfter = Math.max(1, Number(process.env.GEO_DEAD_AFTER || health.deadAfter || 2));
   const fresh = (entry, ttl) => entry && normalizeCode(entry.code) && now - Number(entry.at || 0) < ttl;
   const results = nodes.map(() => ({ code: null, source: null, ip: null, host: null, reachable: null, failCount: 0, dead: false, drop: false, reason: null, latency: null, checkError: null, dnsFailed: false, skipXray: false }));
-  const stats = { override: 0, exit: 0, ip: 0, cache: 0, none: 0, xrayUsed: false, xrayOk: 0, xrayFail: 0, unchecked: 0, unverified: 0, grace: 0, dead: 0, unknown: 0, dnsBad: 0, ruOk: 0, ruBlocked: 0, ruUnknown: 0, ruCached: 0, directIp: null };
+  const stats = { override: 0, exit: 0, ip: 0, cache: 0, none: 0, xrayUsed: false, xrayOk: 0, xrayFail: 0, unchecked: 0, unverified: 0, grace: 0, dead: 0, unknown: 0, dnsBad: 0, ruOk: 0, ruBlocked: 0, ruUnknown: 0, ruCached: 0, recovered: 0, ruOnly: 0, deadEverywhere: 0, directIp: null };
   const nodeKey = (i) => `node:${fingerprintOf(nodes[i].outbound, nodes[i].deps)}`;
   const failKey = (i) => `fail:${fingerprintOf(nodes[i].outbound, nodes[i].deps)}`;
 
@@ -660,16 +669,53 @@ export async function resolveGeo(nodes, { cacheFile, overridesFile, tlsOptions, 
     const concurrency = Math.max(1, Number(process.env.GEO_XRAY_CONCURRENCY || health.concurrency || 6));
     const directIp = checks.directIp;
     stats.directIp = directIp;
-    await mapLimit(nodes.map((_, i) => i), concurrency, async (i) => {
+    const everyIndex = nodes.map((_, i) => i);
+    const hopFor = (i) => (hc.bypassPolicy === "direct" && nodes[i].bypass ? null : checks.hop);
+    const runCheck = async (i, hop) => {
+      try { return await checkViaXray(bin, nodes[i].outbound, { tlsOptions, deps: nodes[i].deps, health, directIp, hop, hopMode: hc.tunnel.mode, hopExitIp: checks.hopInfo?.exitIp }); }
+      catch (error) { return { ok: false, code: null, reason: error.message }; }
+    };
+    const outcome = new Array(nodes.length).fill(null);
+
+    // pass 1: everything, several at a time
+    await mapLimit(everyIndex, concurrency, async (i) => {
       const r = results[i];
       if (r.dnsFailed) return;
       // bypassPolicy "ru": servers meant for Russian whitelists cannot be proven from abroad;
       // they are confirmed only from Russian vantage points (see ruProbe below).
       if (strict && hc.bypassPolicy === "ru" && nodes[i].bypass) { r.skipXray = true; return; }
       if (Date.now() > xrayDeadline) { stats.unchecked++; return; }
-      let check;
-      try { check = await checkViaXray(bin, nodes[i].outbound, { tlsOptions, deps: nodes[i].deps, health, directIp, hop: checks.hop, hopMode: hc.tunnel.mode, hopExitIp: checks.hopInfo?.exitIp }); }
-      catch (error) { check = { ok: false, code: null, reason: error.message }; }
+      outcome[i] = await runCheck(i, hopFor(i));
+    });
+
+    // pass 2: failed servers get a second chance, only a few at a time (the hop may have been busy)
+    const rc = hc.retry;
+    if (strict && rc.enabled) {
+      const again = everyIndex.filter((i) => outcome[i] && !outcome[i].ok && !/^(напрямую: )?TCP /.test(outcome[i].reason || ""));
+      if (again.length) {
+        await delay(rc.delayMs);
+        await mapLimit(again, Math.max(1, rc.concurrency), async (i) => {
+          if (Date.now() > xrayDeadline) return;
+          const second = await runCheck(i, hopFor(i));
+          if (second.ok) { outcome[i] = second; stats.recovered++; }
+          else outcome[i] = { ...outcome[i], reason: `${outcome[i].reason} · повтор тоже не прошёл` };
+        });
+      }
+      // diagnosis: does a server that fails through Russia work directly from the runner?
+      if (rc.diagnose && checks.hop) {
+        const stillBad = everyIndex.filter((i) => outcome[i] && !outcome[i].ok && hopFor(i) && isTcpBased(nodes[i].outbound) && /через РФ/.test(outcome[i].reason || ""));
+        await mapLimit(stillBad, Math.max(2, rc.concurrency), async (i) => {
+          if (Date.now() > xrayDeadline) return;
+          const direct = await runCheck(i, null);
+          if (direct.ok) { stats.ruOnly++; outcome[i].reason += " · напрямую из GitHub РАБОТАЕТ (блок из РФ)"; }
+          else { stats.deadEverywhere++; outcome[i].reason += " · напрямую из GitHub тоже не работает"; }
+        });
+      }
+    }
+
+    for (const i of everyIndex) {
+      const check = outcome[i]; if (!check) continue;
+      const r = results[i];
       r.reachable = check.ok;
       r.latency = check.latency || null;
       r.checkError = check.ok ? null : (check.reason || "нет ответа");
@@ -685,7 +731,7 @@ export async function resolveGeo(nodes, { cacheFile, overridesFile, tlsOptions, 
         cache[failKey(i)] = { n, at: Date.now() };
         r.failCount = n;
       }
-    });
+    }
   }
 
   // TCP reachability from Russian vantage points (check-host.net nodes in RU).
@@ -761,4 +807,4 @@ export async function resolveGeo(nodes, { cacheFile, overridesFile, tlsOptions, 
   for (const key of Object.keys(cache)) if (now - Number(cache[key]?.at || 0) > CACHE_KEEP) delete cache[key];
   writeJsonSafe(cacheFile, cache);
   return { results, stats };
-                     }
+}
