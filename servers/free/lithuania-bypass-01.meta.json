@@ -1,0 +1,16 @@
+{
+  "id": "lithuania-bypass-01",
+  "name": "🇱🇹 Литва | Обход №4",
+  "country": "LT",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "7967faa3098549f3edd7c235203c85fe1a3865018436f9c8c0562b231c294724",
+  "latency": 495,
+  "reachable": true,
+  "bypassNumber": 4,
+  "source": 1
+}

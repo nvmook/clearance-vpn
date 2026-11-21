@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "109.107.189.69",
-            "port": 8443,
+            "address": "45.84.1.207",
+            "port": 443,
             "users": [
               {
-                "id": "cfd6ce74-f4c5-4815-bba4-2fd0fa77bf4e",
+                "id": "c50eae6b-18de-4bdc-a22f-9edda40a57ed",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "gw-721bd5.dobry.monster",
+          "serverName": "at01.tunnely.space",
           "fingerprint": "firefox",
-          "publicKey": "q1EhO97gyUBlF7LiAfeAESI0O2Mg95T4yIk7keOnMEE",
-          "shortId": "0912cc7f28aa26ba",
+          "publicKey": "pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM",
+          "shortId": "2e40144ddc07e8e1",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇷🇺 Россия | Обход №7"
+  "remarks": "🇦🇹 Австрия | Обход №3"
 }

@@ -1,0 +1,16 @@
+{
+  "id": "austria-bypass-01",
+  "name": "🇦🇹 Австрия | Обход №3",
+  "country": "AT",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "539ea244282a48459e4c8bebf8b1f4c82a0f532228dc9aac7c21e51de4bb7304",
+  "latency": 199,
+  "reachable": true,
+  "bypassNumber": 3,
+  "source": 1
+}

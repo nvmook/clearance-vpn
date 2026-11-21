@@ -279,28 +279,26 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.211.170.72",
-            "port": 8444,
+            "address": "152.234.239.170",
+            "port": 9467,
             "users": [
               {
-                "id": "a60be0a5-293e-4723-b633-97a55cc442dc",
-                "encryption": "none"
+                "id": "ff13a272-dd8f-4f4c-89e0-6bfdf25c10a7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "tcp",
         "security": "reality",
-        "grpcSettings": {
-          "serviceName": "grpc"
-        },
         "realitySettings": {
-          "serverName": "nl.sosun4ik.top",
+          "serverName": "mosdownloand.song69.fun",
           "fingerprint": "firefox",
-          "publicKey": "q4tx1Z-993Fgn36lXDzX_JN-0-oqmn1weQUyOEMENiw",
-          "shortId": "9c70cbbfe78c605b",
+          "publicKey": "Qr3DaIQGAtUDR-v4FI0Nltdw43LeXgaXXGGZZk6sP2E",
+          "shortId": "",
           "spiderX": "/"
         }
       },
@@ -319,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №3"
+  "remarks": "🇱🇹 Литва | Обход №4"
 }
