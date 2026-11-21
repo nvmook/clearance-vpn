@@ -279,28 +279,26 @@
       "settings": {
         "vnext": [
           {
-            "address": "84.23.52.104",
-            "port": 9079,
+            "address": "189.74.116.41",
+            "port": 443,
             "users": [
               {
-                "id": "d81db550-4787-467e-b98a-579ee9d41999",
-                "encryption": "none"
+                "id": "53e4aaff-65f5-4667-83ea-8a4c0a60a701",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "tcp",
         "security": "reality",
-        "grpcSettings": {
-          "serviceName": "inetgrpc"
-        },
         "realitySettings": {
-          "serverName": "by.84-23-52-104.sslip.io",
+          "serverName": "api.oblachnyservis.cc",
           "fingerprint": "firefox",
-          "publicKey": "V1ifE7iJ4ITZfA10PNaR7fF7Lz1E_9v7a9S4jPOY-A8",
-          "shortId": "069074d6fbb09e56",
+          "publicKey": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "shortId": "a8",
           "spiderX": "/"
         }
       },
