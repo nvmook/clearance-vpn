@@ -279,27 +279,32 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.86.147.80",
-            "port": 9442,
+            "address": "console.session.stream-stars.org",
+            "port": 443,
             "users": [
               {
-                "id": "e8b7b937-85d9-43f3-bb7a-7d98478756d7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "keshyou.mcufa.pro",
-          "fingerprint": "firefox",
-          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
-          "shortId": "",
-          "spiderX": "/"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/gateway/v1/ws/35b523d4c5bfffe7b8bc00125f15ffwv",
+          "headers": {
+            "Host": "console.session.stream-stars.org"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "console.session.stream-stars.org",
+          "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"
@@ -317,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия | Обход №3"
+  "remarks": "🇩🇪 Германия | Обход №5"
 }

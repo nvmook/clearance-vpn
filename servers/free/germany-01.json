@@ -279,29 +279,26 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.226.93.224",
+            "address": "13.143.160.31",
             "port": 443,
             "users": [
               {
-                "id": "ad295072-0049-4981-a9aa-6314c43e87e5",
-                "encryption": "none"
+                "id": "1f2463e4-545e-4fdf-bd09-303973bb53c7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "tcp",
         "security": "reality",
-        "xhttpSettings": {
-          "path": "/",
-          "mode": "auto"
-        },
         "realitySettings": {
-          "serverName": "n2.fernstatic.com",
+          "serverName": "hermani.loknietotop.digital",
           "fingerprint": "firefox",
-          "publicKey": "xRIN4AZSp2c_yaCurN9DNoh0q8zSj-AlMCflpb1pwBA",
-          "shortId": "00a9d4acc75cf31c",
+          "publicKey": "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE",
+          "shortId": "ff776ff77be48b88",
           "spiderX": "/"
         }
       },

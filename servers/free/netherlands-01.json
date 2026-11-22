@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "94.183.164.13",
+            "address": "217.60.66.9",
             "port": 443,
             "users": [
               {
-                "id": "e8b7b937-85d9-43f3-bb7a-7d98478756d7",
+                "id": "b7049a06-1e51-4e2d-854a-7f81b0d0b35f",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "obger4.mcufa.pro",
+          "serverName": "gnl7847.maxleshax.icu",
           "fingerprint": "firefox",
-          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
-          "shortId": "",
+          "publicKey": "SUhJ4k2qX791MtexRs-RYx8VkNbIZQoh_2S-j1qRsgA",
+          "shortId": "58116b824e4487d0",
           "spiderX": "/"
         }
       },

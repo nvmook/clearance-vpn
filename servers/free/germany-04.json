@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "console.session.stream-stars.org",
-            "port": 443,
+            "address": "cdn175.whitenw.net",
+            "port": 8448,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
-                "encryption": "none"
+                "id": "30e39c03-8c36-48a9-9390-ab0fdcc107c0",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/gateway/v1/ws/9ade28ee7194ca0b153a7676dd4ca912",
-          "headers": {
-            "Host": "console.session.stream-stars.org"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "console.session.stream-stars.org",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "cdn175.whitenw.net",
+          "fingerprint": "firefox",
+          "publicKey": "D0UNiZXtNh5GpnNRWl8595qyfqNr8v9KENMnVJ3vsCM",
+          "shortId": "b615d8736170f5be",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -322,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №15"
+  "remarks": "🇩🇪 Германия №4"
 }

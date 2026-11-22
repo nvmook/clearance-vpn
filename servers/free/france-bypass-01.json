@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "141.193.213.20",
-            "port": 8443,
+            "address": "46.243.142.2",
+            "port": 443,
             "users": [
               {
-                "id": "4d8d9640-7cc7-4c55-ba54-6ce0d1709541",
+                "id": "4ea900c8-b0ed-4766-90bc-504ee4e4807e",
                 "encryption": "none"
               }
             ]
@@ -294,16 +294,17 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "/",
+          "path": "/account/refresh/yVr9KTE0xTBC",
           "headers": {
-            "Host": "matrix.learnpodedu.com"
+            "Host": "api.floweroom.vip"
           }
         },
         "tlsSettings": {
-          "serverName": "matrix.learnpodedu.com",
+          "serverName": "api.floweroom.vip",
           "fingerprint": "chrome",
           "alpn": [
-            "h2"
+            "h2",
+            "http/1.1"
           ]
         }
       },
@@ -322,5 +323,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇸🇬 Сингапур №1"
+  "remarks": "🇫🇷 Франция | Обход №4"
 }

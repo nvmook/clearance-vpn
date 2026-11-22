@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "play.stream-stars.org",
+            "address": "hermani.loknietotop.digital",
             "port": 443,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
-                "encryption": "none"
+                "id": "1f2463e4-545e-4fdf-bd09-303973bb53c7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/gateway/v1/ws/5dc5d1b5bba053b2e0fa478b537b29ec",
-          "headers": {
-            "Host": "play.stream-stars.org"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "play.stream-stars.org",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "hermani.loknietotop.digital",
+          "fingerprint": "firefox",
+          "publicKey": "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE",
+          "shortId": "ff776ff77be48b88",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -322,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия | Обход №10"
+  "remarks": "🇩🇪 Германия №3"
 }

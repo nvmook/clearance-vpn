@@ -279,26 +279,29 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.209.217.67",
+            "address": "31.58.191.93",
             "port": 443,
             "users": [
               {
-                "id": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ad295072-0049-4981-a9aa-6314c43e87e5",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "xhttp",
         "security": "reality",
+        "xhttpSettings": {
+          "path": "/",
+          "mode": "auto"
+        },
         "realitySettings": {
-          "serverName": "ruhsds738.gangtype.com",
+          "serverName": "n4.fernstatic.com",
           "fingerprint": "firefox",
-          "publicKey": "DHNvz0B_jGSTq2uK8Sehqo1u6Vv-fSSvk6-cRQJUKHM",
-          "shortId": "8aaef249c24f2be7",
+          "publicKey": "0MSoevDfxrS1SB5IVdzFT2sMmicWY3Q1FjgZWbqsvXo",
+          "shortId": "3b1a6acf74e481e7",
           "spiderX": "/"
         }
       },

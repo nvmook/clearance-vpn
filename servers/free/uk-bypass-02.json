@@ -279,7 +279,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "console.session.stream-stars.org",
+            "address": "metrics.lk.nehtar.online",
             "port": 443,
             "users": [
               {
@@ -294,13 +294,13 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "/gateway/v1/ws/0aa40b9976050352f92a41203aaf6661",
+          "path": "/gateway/v1/ws/0ee90f3f898dcae54d0f7c1db74a515d",
           "headers": {
-            "Host": "console.session.stream-stars.org"
+            "Host": "metrics.lk.nehtar.online"
           }
         },
         "tlsSettings": {
-          "serverName": "console.session.stream-stars.org",
+          "serverName": "metrics.lk.nehtar.online",
           "fingerprint": "edge",
           "alpn": [
             "http/1.1"
@@ -322,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇬🇧 Великобритания | Обход №13"
+  "remarks": "🇬🇧 Великобритания | Обход №10"
 }

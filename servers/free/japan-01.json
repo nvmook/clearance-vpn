@@ -279,27 +279,30 @@
       "settings": {
         "vnext": [
           {
-            "address": "fi-b2.golangwikito.cfd",
+            "address": "172.64.80.1",
             "port": 443,
             "users": [
               {
-                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "8344360f-0349-4784-a19f-33fd92e89389",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "fi-b2.golangwikito.cfd",
+        "network": "grpc",
+        "security": "tls",
+        "grpcSettings": {
+          "serviceName": "v3-direct"
+        },
+        "tlsSettings": {
+          "serverName": "sync.2ml.bid",
           "fingerprint": "firefox",
-          "publicKey": "ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg",
-          "shortId": "dfff7a7a4c7e5f33",
-          "spiderX": "/"
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"
@@ -317,5 +320,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇮 Финляндия | Обход №8"
+  "remarks": "🇯🇵 Япония №1"
 }

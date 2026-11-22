@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.84.1.207",
-            "port": 443,
+            "address": "sv5.pirs.dev",
+            "port": 56789,
             "users": [
               {
-                "id": "c50eae6b-18de-4bdc-a22f-9edda40a57ed",
+                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "at01.tunnely.space",
+          "serverName": "sv5.pirs.dev",
           "fingerprint": "firefox",
-          "publicKey": "pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM",
-          "shortId": "2e40144ddc07e8e1",
+          "publicKey": "wrCtYVXBR2S8Uhb1yLsAWkxTQjjWlnKty_1n5XOBVmk",
+          "shortId": "a1b2c3d4e5f5749a",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇦🇹 Австрия №1"
+  "remarks": "🇫🇷 Франция №1"
 }

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.132.179.90",
+            "address": "191.217.244.190",
             "port": 443,
             "users": [
               {
-                "id": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
+                "id": "a086c8e2-7a2f-4265-9518-6d7529106b80",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "sbmicro683.gangplatform.com",
+          "serverName": "ertgmb.wey-land.net",
           "fingerprint": "firefox",
-          "publicKey": "Ldrfdkq0bJrZWCS0p1u6Z2tPPal0LzRm4cgEYF_2KH8",
-          "shortId": "cda7e8556ea56616",
+          "publicKey": "l6dfeSmhGc7dGLU_PqhPtMbj4_eONm2Sz_S9D8ePFxY",
+          "shortId": "",
           "spiderX": "/"
         }
       },

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "77.232.40.206",
-            "port": 443,
+            "address": "37.139.42.227",
+            "port": 7443,
             "users": [
               {
-                "id": "c50eae6b-18de-4bdc-a22f-9edda40a57ed",
+                "id": "e8b7b937-85d9-43f3-bb7a-7d98478756d7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "ch02.tunnely.space",
+          "serverName": "multiqq.mcufa.pro",
           "fingerprint": "firefox",
-          "publicKey": "pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM",
-          "shortId": "2e40144ddc07e8e1",
+          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "shortId": "",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇨🇭 Швейцария №1"
+  "remarks": "🇩🇪 Германия №2"
 }

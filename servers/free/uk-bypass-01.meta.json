@@ -1,6 +1,6 @@
 {
   "id": "uk-bypass-01",
-  "name": "🇬🇧 Великобритания | Обход №1",
+  "name": "🇬🇧 Великобритания | Обход №9",
   "country": "GB",
   "tier": "free",
   "kind": "bypass",
@@ -8,9 +8,9 @@
   "auto": true,
   "generatedBy": "upstream",
   "geoSource": "exit",
-  "sourceHash": "7fc05de54e604d7e4874e2509e2ca08160ce725e9cf968d3d802ed33ec9ad34e",
-  "latency": 187,
+  "sourceHash": "dfdb3673cfefe441007e990c8f2171bbfbaeeff92056d3001cca0fd486e58417",
+  "latency": 201,
   "reachable": true,
-  "bypassNumber": 1,
-  "source": 1
+  "bypassNumber": 9,
+  "source": 5
 }

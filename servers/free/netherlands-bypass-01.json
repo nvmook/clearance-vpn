@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "94.183.164.68",
+            "address": "94.183.164.11",
             "port": 443,
             "users": [
               {
-                "id": "4f2de292-cafe-4a5a-80cc-742a957ca43c",
+                "id": "e8b7b937-85d9-43f3-bb7a-7d98478756d7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "dogklinik.growmart.site",
+          "serverName": "obger2.mcufa.pro",
           "fingerprint": "firefox",
-          "publicKey": "ju1YyCfbO_sLy_LZK6G7DbHpR8hhmSc4SaOLLbjuGSE",
-          "shortId": "cd9c321977831739",
+          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "shortId": "",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №4"
+  "remarks": "🇳🇱 Нидерланды | Обход №2"
 }
