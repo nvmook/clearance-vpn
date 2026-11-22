@@ -279,28 +279,26 @@
       "settings": {
         "vnext": [
           {
-            "address": "fi2-serv.maxleshax.icu",
-            "port": 8443,
+            "address": "fi-b2.golangwikito.cfd",
+            "port": 443,
             "users": [
               {
-                "id": "78dbd904-8400-40fa-b67d-8bbaa624d385",
-                "encryption": "none"
+                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "tcp",
         "security": "reality",
-        "grpcSettings": {
-          "serviceName": "platina"
-        },
         "realitySettings": {
-          "serverName": "fi2-serv.maxleshax.icu",
-          "fingerprint": "edge",
-          "publicKey": "uRW_hGx4d5mprUYhkDyoM-JfsqNh5RT6I0J-2VcH-Rc",
-          "shortId": "c8c51d0a44538617",
+          "serverName": "fi-b2.golangwikito.cfd",
+          "fingerprint": "firefox",
+          "publicKey": "ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg",
+          "shortId": "dfff7a7a4c7e5f33",
           "spiderX": "/"
         }
       },
@@ -319,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇮 Финляндия | Обход №6"
+  "remarks": "🇫🇮 Финляндия | Обход №8"
 }

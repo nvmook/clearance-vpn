@@ -8,8 +8,8 @@
   "auto": true,
   "generatedBy": "upstream",
   "geoSource": "exit",
-  "sourceHash": "213c50d80aa1f81704a6b0661d9732824545375f909acc8b093b7298e872f85f",
-  "latency": 224,
+  "sourceHash": "ac822eefa8aa65c835c37c54a318256cd8c75d96749f43d256f8349fb99478b7",
+  "latency": 479,
   "reachable": true,
   "source": 1
 }

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "187.7.207.64",
-            "port": 7443,
+            "address": "168.113.253.178",
+            "port": 443,
             "users": [
               {
-                "id": "863c97b9-c5c3-4596-ab0e-2642e66d376e",
+                "id": "d6d40100-9442-0001-b5b9-6d259318c421",
                 "encryption": "none"
               }
             ]
@@ -291,18 +291,15 @@
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
-        "security": "reality",
-        "xhttpSettings": {
-          "path": "/9e6af6df2215",
-          "mode": "auto"
-        },
-        "realitySettings": {
-          "serverName": "fastdenew.incrediblespeed.online",
-          "fingerprint": "firefox",
-          "publicKey": "DKr_AhHpqYTfkt9GI7_SMvFJPCdNSqTVXLIEPJuRAAM",
-          "shortId": "4738e8ea8fe289e9",
-          "spiderX": "/"
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "uzndiuvzvqqljdyhzs.fcloudservices.site",
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"
@@ -320,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия №2"
+  "remarks": "🇫🇮 Финляндия №1"
 }

@@ -1,0 +1,15 @@
+{
+  "id": "singapore-01",
+  "name": "🇸🇬 Сингапур №1",
+  "country": "SG",
+  "tier": "free",
+  "kind": "standard",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "7892c5f967f77c11c4c1c65630da67c29ad0d23ee1333977c747d7c0fd6b8384",
+  "latency": 614,
+  "reachable": true,
+  "source": 1
+}

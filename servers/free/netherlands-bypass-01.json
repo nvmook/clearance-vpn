@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "nl-s-2-b1.pythonmakemigreat.wiki",
+            "address": "94.183.164.68",
             "port": 443,
             "users": [
               {
-                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+                "id": "4f2de292-cafe-4a5a-80cc-742a957ca43c",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "nl-s-2-b1.pythonmakemigreat.wiki",
+          "serverName": "dogklinik.growmart.site",
           "fingerprint": "firefox",
-          "publicKey": "ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg",
-          "shortId": "a3565610aa574a6e",
+          "publicKey": "ju1YyCfbO_sLy_LZK6G7DbHpR8hhmSc4SaOLLbjuGSE",
+          "shortId": "cd9c321977831739",
           "spiderX": "/"
         }
       },

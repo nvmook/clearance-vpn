@@ -279,33 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.229.9.167",
+            "address": "50.7.154.78",
             "port": 443,
             "users": [
               {
-                "id": "01af0e3b-a83f-4a15-9c4b-0deaadc8c7b7",
-                "encryption": "none"
+                "id": "d718a865-0050-4bde-8083-1864a03a894c",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/api/v1/events",
-          "headers": {
-            "Host": "dh.veliknat.band"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "dh.veliknat.band",
-          "fingerprint": "edge",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "api.mediasvyaz.cc",
+          "fingerprint": "firefox",
+          "publicKey": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "shortId": "a8",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"

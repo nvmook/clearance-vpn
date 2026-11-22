@@ -9,7 +9,7 @@
   "generatedBy": "upstream",
   "geoSource": "exit",
   "sourceHash": "539ea244282a48459e4c8bebf8b1f4c82a0f532228dc9aac7c21e51de4bb7304",
-  "latency": 248,
+  "latency": 185,
   "reachable": true,
   "source": 1
 }

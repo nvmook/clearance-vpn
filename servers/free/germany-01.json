@@ -279,26 +279,29 @@
       "settings": {
         "vnext": [
           {
-            "address": "144.31.167.154",
+            "address": "195.226.93.224",
             "port": 443,
             "users": [
               {
-                "id": "9a9f167d-b461-466f-be50-f0ffd598a6f8",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ad295072-0049-4981-a9aa-6314c43e87e5",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "xhttp",
         "security": "reality",
+        "xhttpSettings": {
+          "path": "/",
+          "mode": "auto"
+        },
         "realitySettings": {
-          "serverName": "gembeforeshoping.space",
+          "serverName": "n2.fernstatic.com",
           "fingerprint": "firefox",
-          "publicKey": "lY9sPrXzj3Dlsj6JTP5UolK1RmIAlstuAy3dBJ97ag0",
-          "shortId": "",
+          "publicKey": "xRIN4AZSp2c_yaCurN9DNoh0q8zSj-AlMCflpb1pwBA",
+          "shortId": "00a9d4acc75cf31c",
           "spiderX": "/"
         }
       },

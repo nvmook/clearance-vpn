@@ -1,6 +1,6 @@
 {
   "id": "netherlands-bypass-02",
-  "name": "🇳🇱 Нидерланды | Обход №9",
+  "name": "🇳🇱 Нидерланды | Обход №5",
   "country": "NL",
   "tier": "free",
   "kind": "bypass",
@@ -8,9 +8,9 @@
   "auto": true,
   "generatedBy": "upstream",
   "geoSource": "exit",
-  "sourceHash": "b22b3d65da6846b9387814f1c62bdb9a99b8eac5b5f966b350c513f23ed44cca",
-  "latency": 262,
+  "sourceHash": "3850f917b77e838979f18627aa9a265de51904040e7688dff1ee787bbc187cb5",
+  "latency": 194,
   "reachable": true,
-  "bypassNumber": 9,
-  "source": 5
+  "bypassNumber": 5,
+  "source": 1
 }

@@ -279,27 +279,32 @@
       "settings": {
         "vnext": [
           {
-            "address": "sv1.pirs.dev",
-            "port": 56789,
+            "address": "play.stream-stars.org",
+            "port": 443,
             "users": [
               {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "sv1.pirs.dev",
-          "fingerprint": "firefox",
-          "publicKey": "3MrvU0V-wv_lZtWav3cpm7QgjvirSq4LMk2_S4OHD30",
-          "shortId": "a1b2c3d4e5f6749a",
-          "spiderX": "/"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/gateway/v1/ws/5dc5d1b5bba053b2e0fa478b537b29ec",
+          "headers": {
+            "Host": "play.stream-stars.org"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "play.stream-stars.org",
+          "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"
@@ -317,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия №6"
+  "remarks": "🇩🇪 Германия | Обход №10"
 }

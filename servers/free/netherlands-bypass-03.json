@@ -301,7 +301,7 @@
         },
         "tlsSettings": {
           "serverName": "lk.nehtar.ru",
-          "fingerprint": "firefox",
+          "fingerprint": "edge",
           "alpn": [
             "http/1.1"
           ]
@@ -322,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №10"
+  "remarks": "🇳🇱 Нидерланды | Обход №11"
 }

@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.129.100.252",
+            "address": "2.26.83.119",
             "port": 443,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
-                "encryption": "none"
+                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/gateway/v1/ws/35b523d4c5bfffe7b8bc00125f15f15a",
-          "headers": {
-            "Host": "lk.nehtar.ru"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "lk.nehtar.ru",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "nl-s-2-b1.pythonmakemigreat.wiki",
+          "fingerprint": "firefox",
+          "publicKey": "ZqVz1kWNxh_5zQ5PPkoPHoaXQOvppM0ZyIo8uKp2dCg",
+          "shortId": "a3565610aa574a6e",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -322,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №9"
+  "remarks": "🇳🇱 Нидерланды | Обход №5"
 }

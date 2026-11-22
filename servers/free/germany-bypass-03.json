@@ -279,7 +279,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "play.stream-stars.org",
+            "address": "console.session.stream-stars.org",
             "port": 443,
             "users": [
               {
@@ -294,13 +294,13 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "/gateway/v1/ws/5dc5d1b5bba053b2e0fa478b537b29ec",
+          "path": "/gateway/v1/ws/35b523d4c5bfffe7b8bc00125f15ffwv",
           "headers": {
-            "Host": "play.stream-stars.org"
+            "Host": "console.session.stream-stars.org"
           }
         },
         "tlsSettings": {
-          "serverName": "play.stream-stars.org",
+          "serverName": "console.session.stream-stars.org",
           "fingerprint": "edge",
           "alpn": [
             "http/1.1"
@@ -322,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия | Обход №8"
+  "remarks": "🇩🇪 Германия | Обход №9"
 }

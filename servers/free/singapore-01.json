@@ -279,27 +279,32 @@
       "settings": {
         "vnext": [
           {
-            "address": "sv5.pirs.dev",
-            "port": 56789,
+            "address": "141.193.213.20",
+            "port": 8443,
             "users": [
               {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "4d8d9640-7cc7-4c55-ba54-6ce0d1709541",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "sv5.pirs.dev",
-          "fingerprint": "firefox",
-          "publicKey": "wrCtYVXBR2S8Uhb1yLsAWkxTQjjWlnKty_1n5XOBVmk",
-          "shortId": "a1b2c3d4e5f5749a",
-          "spiderX": "/"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "matrix.learnpodedu.com"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "matrix.learnpodedu.com",
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2"
+          ]
         }
       },
       "tag": "proxy"
@@ -317,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇷 Франция №1"
+  "remarks": "🇸🇬 Сингапур №1"
 }
