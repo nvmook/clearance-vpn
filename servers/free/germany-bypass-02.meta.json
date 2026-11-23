@@ -1,6 +1,6 @@
 {
   "id": "germany-bypass-02",
-  "name": "🇩🇪 Германия | Обход №6",
+  "name": "🇩🇪 Германия | Обход №2",
   "country": "DE",
   "tier": "free",
   "kind": "bypass",
@@ -8,9 +8,9 @@
   "auto": true,
   "generatedBy": "upstream",
   "geoSource": "exit",
-  "sourceHash": "b90531287c14b94207e6caf01226a3296d26aa300a07e09d8eb82a6d41cfc768",
-  "latency": 201,
+  "sourceHash": "14d2c4e4347f55123a7ee20f47851687f72de83bd908e36339ccb9916b75264b",
+  "latency": 211,
   "reachable": true,
-  "bypassNumber": 6,
-  "source": 5
+  "bypassNumber": 2,
+  "source": 1
 }

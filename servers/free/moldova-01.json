@@ -279,12 +279,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.132.176.150",
+            "address": "85.120.252.40",
             "port": 443,
             "users": [
               {
-                "id": "00000000-0000-0001-0000-000000000000",
-                "encryption": "none"
+                "id": "454a209e-2f93-46b8-9dd9-dd56a08651cf",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -292,14 +293,13 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "ozzie-ru-84sb.my-fade.cloud",
-          "fingerprint": "qq",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "mold.nxxzxaw.beer",
+          "fingerprint": "firefox",
+          "publicKey": "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk",
+          "shortId": "ff776ff77be48b88",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇮 Финляндия | Обход №2"
+  "remarks": "🇲🇩 Молдова №1"
 }

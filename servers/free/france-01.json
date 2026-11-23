@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "sv5.pirs.dev",
-            "port": 56789,
+            "address": "api.videodolina.cc",
+            "port": 443,
             "users": [
               {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
+                "id": "3208bc65-8489-442e-982a-6d18893a38c0",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "sv5.pirs.dev",
+          "serverName": "api.videodolina.cc",
           "fingerprint": "firefox",
-          "publicKey": "wrCtYVXBR2S8Uhb1yLsAWkxTQjjWlnKty_1n5XOBVmk",
-          "shortId": "a1b2c3d4e5f5749a",
+          "publicKey": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "shortId": "a8",
           "spiderX": "/"
         }
       },

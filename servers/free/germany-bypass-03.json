@@ -279,26 +279,28 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.132.179.90",
-            "port": 443,
+            "address": "168.113.142.70",
+            "port": 9096,
             "users": [
               {
-                "id": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "d81db550-4787-467e-b98a-579ee9d41999",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "grpc",
         "security": "reality",
+        "grpcSettings": {
+          "serviceName": "inetgrpc"
+        },
         "realitySettings": {
-          "serverName": "sbmicro683.gangplatform.com",
-          "fingerprint": "firefox",
-          "publicKey": "Ldrfdkq0bJrZWCS0p1u6Z2tPPal0LzRm4cgEYF_2KH8",
-          "shortId": "cda7e8556ea56616",
+          "serverName": "p2g.168-113-142-70.sslip.io",
+          "fingerprint": "edge",
+          "publicKey": "JASBooze12B0nAaLU2QMWkeAqXwh4GmhfPD_O9YteT0",
+          "shortId": "6ba85179e30d4fc2",
           "spiderX": "/"
         }
       },
@@ -317,5 +319,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇵🇱 Польша №1"
+  "remarks": "🇩🇪 Германия | Обход №6"
 }

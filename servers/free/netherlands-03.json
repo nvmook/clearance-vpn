@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "144.31.156.42",
+            "address": "195.209.223.0",
             "port": 443,
             "users": [
               {
-                "id": "8f154051-5b60-4e04-8880-a416c133a61b",
-                "encryption": "none"
+                "id": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
-        "security": "tls",
-        "xhttpSettings": {
-          "path": "/content/sec.mp4/",
-          "host": "ndc-finar.askme.ooo",
-          "mode": "packet-up"
-        },
-        "tlsSettings": {
-          "serverName": "ndc-finar.askme.ooo",
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ruhsds735.thebestqas.am",
           "fingerprint": "firefox",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+          "publicKey": "KYCw7cXjogBXLwakD95fS0ez_Ohp841nJv0w0ntu_FU",
+          "shortId": "8b360b27c8ae3791",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -322,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇮 Финляндия №1"
+  "remarks": "🇳🇱 Нидерланды №3"
 }

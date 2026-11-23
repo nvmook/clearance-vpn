@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "88.210.62.96",
+            "address": "n3.fernstatic.com",
             "port": 443,
             "users": [
               {
-                "id": "42638beb-6068-4626-b035-5cc1f31b03d6",
+                "id": "86420b69-84f9-4726-ab17-fb0a7bc05d8f",
                 "encryption": "none"
               }
             ]
@@ -295,14 +295,13 @@
         "security": "reality",
         "xhttpSettings": {
           "path": "/",
-          "host": "nl-xhttp.kitsuedge.win",
           "mode": "auto"
         },
         "realitySettings": {
-          "serverName": "nl-xhttp.kitsuedge.win",
+          "serverName": "n3.fernstatic.com",
           "fingerprint": "firefox",
-          "publicKey": "5peSNpDPIjzBwoQBuMH0AoXc2lw8aq9PirPHw84wYAg",
-          "shortId": "8293c6fda2bab7b5",
+          "publicKey": "LGj0rJ5R28CbD24VRc5nCpNg-2EMU85fmUZNdrZ6CWI",
+          "shortId": "bc7b676b8ed7b300",
           "spiderX": "/"
         }
       },

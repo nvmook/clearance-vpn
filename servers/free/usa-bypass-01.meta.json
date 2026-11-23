@@ -1,0 +1,16 @@
+{
+  "id": "usa-bypass-01",
+  "name": "🇺🇸 США | Обход №5",
+  "country": "US",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "abcc79865765f3175e0fbc1b62130ecbfc903bd31f50c1e9ab5be390e1729b82",
+  "latency": 286,
+  "reachable": true,
+  "bypassNumber": 5,
+  "source": 1
+}

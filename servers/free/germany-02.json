@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "144.31.218.188",
+            "address": "66.241.124.242",
             "port": 443,
             "users": [
               {
-                "id": "1f2836d7-e9ef-47d7-a9c4-1037077ae8d7",
+                "id": "0bdfa63d-d6a8-5231-6ae1-495a602a0fe0",
                 "encryption": "none"
               }
             ]
@@ -291,15 +291,16 @@
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "ws",
         "security": "tls",
-        "xhttpSettings": {
-          "path": "/api/v1/events",
-          "host": "cz1.rarebooster.tech",
-          "mode": "packet-up"
+        "wsSettings": {
+          "path": "/ws/0bdfa63d-d6a8-5231-6ae1-495a602a0fe0",
+          "headers": {
+            "Host": "rvg-g6qmnw.fly.dev"
+          }
         },
         "tlsSettings": {
-          "serverName": "cz1.rarebooster.tech",
+          "serverName": "rvg-g6qmnw.fly.dev",
           "fingerprint": "firefox",
           "alpn": [
             "h2"

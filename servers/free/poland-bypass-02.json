@@ -279,7 +279,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.151.241.22",
+            "address": "136.148.83.70",
             "port": 443,
             "users": [
               {
@@ -294,8 +294,8 @@
         "network": "tcp",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "mrhytymqyorzvzgwoh.fcloudservices.site",
-          "fingerprint": "firefox",
+          "serverName": "aszbk-ru-78dc.my-fade.cloud",
+          "fingerprint": "qq",
           "alpn": [
             "h2",
             "http/1.1"
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇵🇱 Польша | Обход №3"
+  "remarks": "🇵🇱 Польша | Обход №4"
 }

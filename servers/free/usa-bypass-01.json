@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "13.143.180.220",
-            "port": 443,
+            "address": "168.113.142.70",
+            "port": 9118,
             "users": [
               {
-                "id": "1f2836d7-e9ef-47d7-a9c4-1037077ae8d7",
+                "id": "d81db550-4787-467e-b98a-579ee9d41999",
                 "encryption": "none"
               }
             ]
@@ -291,18 +291,16 @@
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "grpc",
         "security": "reality",
-        "xhttpSettings": {
-          "path": "/api/v1/events",
-          "host": "sw1.rarebooster.tech",
-          "mode": "packet-up"
+        "grpcSettings": {
+          "serviceName": "inetgrpc"
         },
         "realitySettings": {
-          "serverName": "sw1.rarebooster.tech",
+          "serverName": "us.168-113-142-70.sslip.io",
           "fingerprint": "firefox",
-          "publicKey": "iGcMUVn0z9N7GumAhiJi-VLxZrK4FM6aPrlmA1ux_SA",
-          "shortId": "",
+          "publicKey": "4q4qXs-E4wzxXyV4TrOC-mEzx2S6h_LjQ_t_gc4wQEs",
+          "shortId": "6ba85179e30d4fc2",
           "spiderX": "/"
         }
       },
@@ -321,5 +319,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇫🇮 Финляндия №3"
+  "remarks": "🇺🇸 США | Обход №5"
 }
