@@ -279,7 +279,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.129.100.252",
+            "address": "console.session.stream-stars.org",
             "port": 443,
             "users": [
               {
@@ -294,14 +294,14 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "/gateway/v1/ws/35b523d4c5bfffe7b8bc00125f15f15a",
+          "path": "/gateway/v1/ws/9ade28ee7194ca0b153a7676dd4ca912",
           "headers": {
-            "Host": "lk.nehtar.ru"
+            "Host": "console.session.stream-stars.org"
           }
         },
         "tlsSettings": {
-          "serverName": "lk.nehtar.ru",
-          "fingerprint": "firefox",
+          "serverName": "console.session.stream-stars.org",
+          "fingerprint": "edge",
           "alpn": [
             "http/1.1"
           ]
@@ -322,5 +322,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №8"
+  "remarks": "🇳🇱 Нидерланды | Обход №11"
 }

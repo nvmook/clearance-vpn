@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.151.31.69",
-            "port": 443,
+            "address": "168.113.142.70",
+            "port": 9079,
             "users": [
               {
-                "id": "3bc2d8b2-fd28-0001-984c-214c2587aa8e",
+                "id": "d81db550-4787-467e-b98a-579ee9d41999",
                 "encryption": "none"
               }
             ]
@@ -291,15 +291,17 @@
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "ykqli-ru-85.my-fade.cloud",
-          "fingerprint": "ios",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+        "network": "grpc",
+        "security": "reality",
+        "grpcSettings": {
+          "serviceName": "inetgrpc"
+        },
+        "realitySettings": {
+          "serverName": "by.168-113-142-70.sslip.io",
+          "fingerprint": "firefox",
+          "publicKey": "V1ifE7iJ4ITZfA10PNaR7fF7Lz1E_9v7a9S4jPOY-A8",
+          "shortId": "069074d6fbb09e56",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -317,5 +319,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇵🇱 Польша | Обход №3"
+  "remarks": "🇵🇱 Польша | Обход №1"
 }

@@ -1,0 +1,16 @@
+{
+  "id": "poland-bypass-02",
+  "name": "🇵🇱 Польша | Обход №3",
+  "country": "PL",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "148670ff88f6d702101674b0ef937198c77a7e496a61d1e5d318b7b7ffb58941",
+  "latency": 180,
+  "reachable": true,
+  "bypassNumber": 3,
+  "source": 1
+}

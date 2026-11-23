@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "play.stream-stars.org",
+            "address": "87.121.89.165",
             "port": 443,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
-                "encryption": "none"
+                "id": "cd1ac04c-3dea-450b-b57b-2aa00f357353",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/gateway/v1/ws/5dc5d1b5bba053b2e0fa478b537b29ec",
-          "headers": {
-            "Host": "play.stream-stars.org"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "play.stream-stars.org",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "hosting.sywl5.club",
+          "fingerprint": "firefox",
+          "publicKey": "eHdHpA-hKq3aXoVTW_ysflcYKmNbuCSExN167jKtnAY",
+          "shortId": "fa6ca0ce38e58033",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -322,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия | Обход №6"
+  "remarks": "🇫🇮 Финляндия | Обход №4"
 }

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "31.58.191.93",
+            "address": "89.22.234.77",
             "port": 443,
             "users": [
               {
-                "id": "ad295072-0049-4981-a9aa-6314c43e87e5",
+                "id": "1f2836d7-e9ef-47d7-a9c4-1037077ae8d7",
                 "encryption": "none"
               }
             ]
@@ -294,14 +294,15 @@
         "network": "xhttp",
         "security": "reality",
         "xhttpSettings": {
-          "path": "/",
-          "mode": "auto"
+          "path": "/api/v1/events",
+          "host": "sw2.rarebooster.tech",
+          "mode": "packet-up"
         },
         "realitySettings": {
-          "serverName": "n4.fernstatic.com",
+          "serverName": "sw2.rarebooster.tech",
           "fingerprint": "firefox",
-          "publicKey": "0MSoevDfxrS1SB5IVdzFT2sMmicWY3Q1FjgZWbqsvXo",
-          "shortId": "3b1a6acf74e481e7",
+          "publicKey": "iGcMUVn0z9N7GumAhiJi-VLxZrK4FM6aPrlmA1ux_SA",
+          "shortId": "",
           "spiderX": "/"
         }
       },
@@ -320,5 +321,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды №3"
+  "remarks": "🇫🇮 Финляндия №2"
 }

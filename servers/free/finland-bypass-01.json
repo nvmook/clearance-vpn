@@ -279,13 +279,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "sv1.pirs.dev",
-            "port": 56789,
+            "address": "45.132.176.150",
+            "port": 443,
             "users": [
               {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "00000000-0000-0001-0000-000000000000",
+                "encryption": "none"
               }
             ]
           }
@@ -293,13 +292,14 @@
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "sv1.pirs.dev",
-          "fingerprint": "firefox",
-          "publicKey": "3MrvU0V-wv_lZtWav3cpm7QgjvirSq4LMk2_S4OHD30",
-          "shortId": "a1b2c3d4e5f6749a",
-          "spiderX": "/"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "ozzie-ru-84sb.my-fade.cloud",
+          "fingerprint": "qq",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия №6"
+  "remarks": "🇫🇮 Финляндия | Обход №2"
 }

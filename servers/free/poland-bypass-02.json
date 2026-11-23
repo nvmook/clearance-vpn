@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.64.80.1",
+            "address": "185.151.241.22",
             "port": 443,
             "users": [
               {
-                "id": "8344360f-0349-4784-a19f-33fd92e89389",
+                "id": "00000000-0000-0001-0000-000000000000",
                 "encryption": "none"
               }
             ]
@@ -291,13 +291,10 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "tcp",
         "security": "tls",
-        "grpcSettings": {
-          "serviceName": "v3-direct"
-        },
         "tlsSettings": {
-          "serverName": "sync.2ml.bid",
+          "serverName": "mrhytymqyorzvzgwoh.fcloudservices.site",
           "fingerprint": "firefox",
           "alpn": [
             "h2",
@@ -320,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇯🇵 Япония №1"
+  "remarks": "🇵🇱 Польша | Обход №3"
 }

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "hermani.loknietotop.digital",
-            "port": 443,
+            "address": "serv2.pirs.dev",
+            "port": 56789,
             "users": [
               {
-                "id": "1f2463e4-545e-4fdf-bd09-303973bb53c7",
+                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "hermani.loknietotop.digital",
+          "serverName": "serv2.pirs.dev",
           "fingerprint": "firefox",
-          "publicKey": "W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE",
-          "shortId": "ff776ff77be48b88",
+          "publicKey": "0x-gszBcKeAR0AdmfpEUQsa3jbEImckXq1IPa7jtdHY",
+          "shortId": "a1b2c3d4e5f6549a",
           "spiderX": "/"
         }
       },

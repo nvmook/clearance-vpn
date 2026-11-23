@@ -279,25 +279,29 @@
       "settings": {
         "vnext": [
           {
-            "address": "94.183.164.10",
+            "address": "13.143.180.220",
             "port": 443,
             "users": [
               {
-                "id": "e8b7b937-85d9-43f3-bb7a-7d98478756d7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "1f2836d7-e9ef-47d7-a9c4-1037077ae8d7",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "xhttp",
         "security": "reality",
+        "xhttpSettings": {
+          "path": "/api/v1/events",
+          "host": "sw1.rarebooster.tech",
+          "mode": "packet-up"
+        },
         "realitySettings": {
-          "serverName": "obger1.mcufa.pro",
+          "serverName": "sw1.rarebooster.tech",
           "fingerprint": "firefox",
-          "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "publicKey": "iGcMUVn0z9N7GumAhiJi-VLxZrK4FM6aPrlmA1ux_SA",
           "shortId": "",
           "spiderX": "/"
         }
@@ -317,5 +321,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды №5"
+  "remarks": "🇫🇮 Финляндия №3"
 }

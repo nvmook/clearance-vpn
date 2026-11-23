@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "177.3.252.240",
-            "port": 8443,
+            "address": "45.132.179.90",
+            "port": 443,
             "users": [
               {
-                "id": "b1dde8e4-9f7c-4468-93cf-53c64d933b54",
+                "id": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "hub.zadonat.net",
-          "fingerprint": "safari",
-          "publicKey": "SL9omNDVpeF6vWnbTPI5mN6ATl1L1eiMIKYx9XF7IVI",
-          "shortId": "a1ab5a56bccba12e",
+          "serverName": "sbmicro683.gangplatform.com",
+          "fingerprint": "firefox",
+          "publicKey": "Ldrfdkq0bJrZWCS0p1u6Z2tPPal0LzRm4cgEYF_2KH8",
+          "shortId": "cda7e8556ea56616",
           "spiderX": "/"
         }
       },
