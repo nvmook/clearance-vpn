@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "85.120.252.40",
+            "address": "136.234.16.199",
             "port": 443,
             "users": [
               {
-                "id": "454a209e-2f93-46b8-9dd9-dd56a08651cf",
+                "id": "ef1da56e-8117-03eb-bcd8-9094ebbdf985",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "mold.nxxzxaw.beer",
+          "serverName": "play.robloxfans.fun",
           "fingerprint": "firefox",
-          "publicKey": "bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk",
-          "shortId": "ff776ff77be48b88",
+          "publicKey": "-C8hJPrwHjokiUeF0glRMng3R5vZUhIN_aVQ1ItQYl8",
+          "shortId": "4c3872a0264f69ae",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇲🇩 Молдова №1"
+  "remarks": "🇫🇮 Финляндия №1"
 }

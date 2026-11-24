@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "66.241.124.242",
+            "address": "kiln.elvano.website",
             "port": 443,
             "users": [
               {
-                "id": "0bdfa63d-d6a8-5231-6ae1-495a602a0fe0",
+                "id": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
                 "encryption": "none"
               }
             ]
@@ -291,16 +291,15 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "xhttp",
         "security": "tls",
-        "wsSettings": {
-          "path": "/ws/0bdfa63d-d6a8-5231-6ae1-495a602a0fe0",
-          "headers": {
-            "Host": "rvg-g6qmnw.fly.dev"
-          }
+        "xhttpSettings": {
+          "path": "/api/preview/",
+          "host": "kiln.elvano.website",
+          "mode": "packet-up"
         },
         "tlsSettings": {
-          "serverName": "rvg-g6qmnw.fly.dev",
+          "serverName": "kiln.elvano.website",
           "fingerprint": "firefox",
           "alpn": [
             "h2"

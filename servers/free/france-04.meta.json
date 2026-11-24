@@ -1,0 +1,15 @@
+{
+  "id": "france-04",
+  "name": "🇫🇷 Франция №4",
+  "country": "FR",
+  "tier": "free",
+  "kind": "standard",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "71edda39c9f0bd34d358e09a3942f0d5c623e49b85025410ac9643b7ea36dc73",
+  "latency": 251,
+  "reachable": true,
+  "source": 3
+}

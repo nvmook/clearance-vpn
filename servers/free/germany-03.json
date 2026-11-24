@@ -275,31 +275,28 @@
   ],
   "outbounds": [
     {
-      "protocol": "vless",
+      "protocol": "trojan",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "serv2.pirs.dev",
-            "port": 56789,
-            "users": [
-              {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
+            "address": "msk-ge-1.marshonet.store",
+            "port": 8228,
+            "password": "__G3ju8Y48C9Va3mjqRfd5CL2nsbqU16"
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "serv2.pirs.dev",
-          "fingerprint": "firefox",
-          "publicKey": "0x-gszBcKeAR0AdmfpEUQsa3jbEImckXq1IPa7jtdHY",
-          "shortId": "a1b2c3d4e5f6549a",
-          "spiderX": "/"
+        "network": "grpc",
+        "security": "tls",
+        "grpcSettings": {
+          "serviceName": "trgrpc"
+        },
+        "tlsSettings": {
+          "serverName": "msk-ge-1.marshonet.store",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2"
+          ]
         }
       },
       "tag": "proxy"

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "31.59.117.196",
-            "port": 9443,
+            "address": "195.133.60.12",
+            "port": 443,
             "users": [
               {
-                "id": "ad295072-0049-4981-a9aa-6314c43e87e5",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "n3.fernstatic.com",
+          "serverName": "rumicro654.richhoodfoc.com",
           "fingerprint": "firefox",
-          "publicKey": "LGj0rJ5R28CbD24VRc5nCpNg-2EMU85fmUZNdrZ6CWI",
-          "shortId": "bc7b676b8ed7b300",
+          "publicKey": "h1m6Etk-poZ00pGlXbGhGsSR3x3n1pwWn_mqX1NFiVs",
+          "shortId": "14c8b8dc00ecff22",
           "spiderX": "/"
         }
       },

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.209.223.0",
+            "address": "185.185.71.168",
             "port": 443,
             "users": [
               {
-                "id": "ef5a57c7-84d5-4f86-b99c-875a16da485f",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "ruhsds735.thebestqas.am",
+          "serverName": "rusbox745.gangtype.com",
           "fingerprint": "firefox",
-          "publicKey": "KYCw7cXjogBXLwakD95fS0ez_Ohp841nJv0w0ntu_FU",
-          "shortId": "8b360b27c8ae3791",
+          "publicKey": "RZPobWJXwesTvFGCPTeE40Oc0AWFj0fmv0UDeJFLIhY",
+          "shortId": "bf83ed9220c59bc3",
           "spiderX": "/"
         }
       },

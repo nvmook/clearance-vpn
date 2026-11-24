@@ -275,34 +275,49 @@
   ],
   "outbounds": [
     {
+      "tag": "proxy",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "api.videodolina.cc",
-            "port": 443,
+            "address": "178.236.254.41",
+            "port": 47443,
             "users": [
               {
-                "id": "3208bc65-8489-442e-982a-6d18893a38c0",
+                "id": "9b63ed47-ec51-4376-8a21-4d505dcdc327",
                 "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "flow": ""
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "xhttp",
+        "xhttpSettings": {
+          "mode": "auto",
+          "host": "",
+          "path": "/v2/media/segment",
+          "extra": {
+            "xmux": {
+              "maxConnections": 4,
+              "hKeepAlivePeriod": 10,
+              "hMaxRequestTimes": "600-900",
+              "hMaxReusableSecs": "1800-3000"
+            }
+          }
+        },
         "security": "reality",
         "realitySettings": {
-          "serverName": "api.videodolina.cc",
-          "fingerprint": "firefox",
-          "publicKey": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "shortId": "a8",
-          "spiderX": "/"
+          "serverName": "s3-fr2.tgflovv.ru",
+          "publicKey": "tj4yLKNZCTy4Iz5UFCEsVqHmvz1wMoQd0rr8st_OTjI",
+          "shortId": "94032fab9cc653f8",
+          "fingerprint": "edge"
+        },
+        "sockopt": {
+          "tcpUserTimeout": 10000
         }
-      },
-      "tag": "proxy"
+      }
     },
     {
       "tag": "block",

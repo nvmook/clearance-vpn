@@ -1,0 +1,15 @@
+{
+  "id": "france-03",
+  "name": "🇫🇷 Франция №3",
+  "country": "FR",
+  "tier": "free",
+  "kind": "standard",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "f2be9c99c2c5bf50fd0527f230cb45a174e91705aca66c4b2030540ac39c81e5",
+  "latency": 249,
+  "reachable": true,
+  "source": 3
+}

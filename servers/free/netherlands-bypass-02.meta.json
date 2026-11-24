@@ -1,6 +1,6 @@
 {
   "id": "netherlands-bypass-02",
-  "name": "🇳🇱 Нидерланды | Обход №8",
+  "name": "🇳🇱 Нидерланды | Обход №4",
   "country": "NL",
   "tier": "free",
   "kind": "bypass",
@@ -9,8 +9,8 @@
   "generatedBy": "upstream",
   "geoSource": "exit",
   "sourceHash": "e50b89c29e80097c5041dcb29dec3bc00ba901dcb5bd2651ad3583b51acd877e",
-  "latency": 234,
+  "latency": 279,
   "reachable": true,
-  "bypassNumber": 8,
+  "bypassNumber": 4,
   "source": 5
 }

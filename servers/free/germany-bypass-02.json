@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "138.16.202.121",
-            "port": 9096,
+            "address": "play.stream-stars.org",
+            "port": 443,
             "users": [
               {
-                "id": "d81db550-4787-467e-b98a-579ee9d41999",
+                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
                 "encryption": "none"
               }
             ]
@@ -291,17 +291,20 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
-        "security": "reality",
-        "grpcSettings": {
-          "serviceName": "inetgrpc"
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/gateway/v1/ws/5dc5d1b5bba053b2e0fa478b537b29ec",
+          "headers": {
+            "Host": "play.stream-stars.org"
+          }
         },
-        "realitySettings": {
-          "serverName": "p2g.138-16-202-121.sslip.io",
-          "fingerprint": "firefox",
-          "publicKey": "JASBooze12B0nAaLU2QMWkeAqXwh4GmhfPD_O9YteT0",
-          "shortId": "6ba85179e30d4fc2",
-          "spiderX": "/"
+        "tlsSettings": {
+          "serverName": "play.stream-stars.org",
+          "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       },
       "tag": "proxy"

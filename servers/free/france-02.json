@@ -275,36 +275,49 @@
   ],
   "outbounds": [
     {
+      "tag": "proxy",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "168.113.142.70",
-            "port": 9096,
+            "address": "2a12:5940:e53a:7d66:b43b:2c22:3a55:fc96",
+            "port": 47443,
             "users": [
               {
-                "id": "d81db550-4787-467e-b98a-579ee9d41999",
-                "encryption": "none"
+                "id": "9b63ed47-ec51-4376-8a21-4d505dcdc327",
+                "encryption": "none",
+                "flow": ""
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
-        "security": "reality",
-        "grpcSettings": {
-          "serviceName": "inetgrpc"
+        "network": "xhttp",
+        "xhttpSettings": {
+          "mode": "auto",
+          "host": "",
+          "path": "/v2/media/segment",
+          "extra": {
+            "xmux": {
+              "maxConnections": 4,
+              "hKeepAlivePeriod": 10,
+              "hMaxRequestTimes": "600-900",
+              "hMaxReusableSecs": "1800-3000"
+            }
+          }
         },
+        "security": "reality",
         "realitySettings": {
-          "serverName": "p2g.168-113-142-70.sslip.io",
-          "fingerprint": "edge",
-          "publicKey": "JASBooze12B0nAaLU2QMWkeAqXwh4GmhfPD_O9YteT0",
-          "shortId": "6ba85179e30d4fc2",
-          "spiderX": "/"
+          "serverName": "s3-fr2.tgflovv.ru",
+          "publicKey": "tj4yLKNZCTy4Iz5UFCEsVqHmvz1wMoQd0rr8st_OTjI",
+          "shortId": "94032fab9cc653f8",
+          "fingerprint": "edge"
+        },
+        "sockopt": {
+          "tcpUserTimeout": 10000
         }
-      },
-      "tag": "proxy"
+      }
     },
     {
       "tag": "block",
@@ -319,5 +332,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия | Обход №6"
+  "remarks": "🇫🇷 Франция №2"
 }

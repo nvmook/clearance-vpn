@@ -279,26 +279,29 @@
       "settings": {
         "vnext": [
           {
-            "address": "sv1.pirs.dev",
-            "port": 56789,
+            "address": "13.143.198.140",
+            "port": 443,
             "users": [
               {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "a38e3651-a36c-445d-87e1-336a7855edb4",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "grpc",
         "security": "reality",
+        "grpcSettings": {
+          "serviceName": "grpc-tunnel",
+          "multiMode": true
+        },
         "realitySettings": {
-          "serverName": "sv1.pirs.dev",
+          "serverName": "blg01.deflink.net",
           "fingerprint": "firefox",
-          "publicKey": "3MrvU0V-wv_lZtWav3cpm7QgjvirSq4LMk2_S4OHD30",
-          "shortId": "a1b2c3d4e5f6749a",
+          "publicKey": "pqZCztpkaSLv6LDBXXoxYRCclCC85M7LfxEAg3-RDDI",
+          "shortId": "844ca9e88fa64958",
           "spiderX": "/"
         }
       },
@@ -317,5 +320,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия №4"
+  "remarks": "🇵🇱 Польша №1"
 }
