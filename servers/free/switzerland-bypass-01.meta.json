@@ -1,0 +1,16 @@
+{
+  "id": "switzerland-bypass-01",
+  "name": "🇨🇭 Швейцария | Обход №5",
+  "country": "CH",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "5463ff56973422b1db497aadb9c6c903d74e17b1af71c43377ee78cb3560d700",
+  "latency": 216,
+  "reachable": true,
+  "bypassNumber": 5,
+  "source": 1
+}

@@ -275,28 +275,31 @@
   ],
   "outbounds": [
     {
-      "protocol": "trojan",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "msk-ge-1.marshonet.store",
-            "port": 8228,
-            "password": "__G3ju8Y48C9Va3mjqRfd5CL2nsbqU16"
+            "address": "edge08.tunnely.space",
+            "port": 443,
+            "users": [
+              {
+                "id": "11d14aed-3d44-4bb2-b9c0-24e661589e5a",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "grpcSettings": {
-          "serviceName": "trgrpc"
-        },
-        "tlsSettings": {
-          "serverName": "msk-ge-1.marshonet.store",
-          "fingerprint": "edge",
-          "alpn": [
-            "h2"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ch09.tunnely.space",
+          "fingerprint": "firefox",
+          "publicKey": "pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM",
+          "shortId": "2e40144ddc07e8e1",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -314,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇩🇪 Германия №3"
+  "remarks": "🇨🇭 Швейцария | Обход №5"
 }

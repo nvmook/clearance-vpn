@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "console.session.stream-stars.org",
+            "address": "48.102.133.140",
             "port": 443,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
-                "encryption": "none"
+                "id": "841a00f9-8f53-40a4-94bb-950470d03a2f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/gateway/v1/ws/35b523d4c5bfffe7b8bc00125f15ffwv",
-          "headers": {
-            "Host": "console.session.stream-stars.org"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "console.session.stream-stars.org",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "lesnaya-masterskaya.duckdns.org",
+          "fingerprint": "firefox",
+          "publicKey": "-qjay03hWiIIofsVHZ_PCpFh_GK-ee99Jtzk9ivsUn0",
+          "shortId": "a03db3a9c86719e4",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"

@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "ser1.pirs.dev",
-            "port": 56789,
+            "address": "193.160.208.21",
+            "port": 443,
             "users": [
               {
-                "id": "b322a0da-e840-482a-8d8a-d9fbcb43ff59",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "ser1.pirs.dev",
-          "fingerprint": "firefox",
-          "publicKey": "JMb7xY1eZcvI87lc_tsEXzg_jM0s_JktIwg6x5V1U1U",
-          "shortId": "a1b2c3d4e5f6749a",
+          "serverName": "ruitaliamicro2.gangplatform.com",
+          "fingerprint": "qq",
+          "publicKey": "W7AD8d4R4-7TQW3-m5wJ0aJHzBcjPVdJF22jr2rP03A",
+          "shortId": "8f88b244f4fa8a69",
           "spiderX": "/"
         }
       },
@@ -317,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды №5"
+  "remarks": "🇮🇹 Италия | Обход №2"
 }

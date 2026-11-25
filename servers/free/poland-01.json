@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "13.143.198.140",
+            "address": "45.139.84.115",
             "port": 443,
             "users": [
               {
-                "id": "a38e3651-a36c-445d-87e1-336a7855edb4",
+                "id": "ca5b2bab-e5f7-4dd4-a4b7-ebd4a34a02ca",
                 "encryption": "none"
               }
             ]
@@ -294,14 +294,13 @@
         "network": "grpc",
         "security": "reality",
         "grpcSettings": {
-          "serviceName": "grpc-tunnel",
-          "multiMode": true
+          "serviceName": "vless-grpc"
         },
         "realitySettings": {
-          "serverName": "blg01.deflink.net",
+          "serverName": "mhost-pl.zalupa231313.shop",
           "fingerprint": "firefox",
-          "publicKey": "pqZCztpkaSLv6LDBXXoxYRCclCC85M7LfxEAg3-RDDI",
-          "shortId": "844ca9e88fa64958",
+          "publicKey": "EoeKDsLFEs6F6XMnkQZgvHJ4FfB4s5g0hSP5JE2RCl0",
+          "shortId": "a1b2c3d4",
           "spiderX": "/"
         }
       },

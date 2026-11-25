@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "console.session.stream-stars.org",
+            "address": "94.183.167.153",
             "port": 443,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
-                "encryption": "none"
+                "id": "80b3cf20-c77c-4fb9-a69e-55c9dadd58c8",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/gateway/v1/ws/9ade28ee7194ca0b153a7676dd4ca912",
-          "headers": {
-            "Host": "console.session.stream-stars.org"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "console.session.stream-stars.org",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "play.3apes.pro",
+          "fingerprint": "firefox",
+          "publicKey": "q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ",
+          "shortId": "",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -322,5 +317,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №7"
+  "remarks": "🇵🇱 Польша | Обход №4"
 }

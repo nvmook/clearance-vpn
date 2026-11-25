@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.129.100.252",
+            "address": "13.143.198.140",
             "port": 443,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
+                "id": "a38e3651-a36c-445d-87e1-336a7855edb4",
                 "encryption": "none"
               }
             ]
@@ -291,20 +291,18 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/gateway/v1/ws/35b523d4c5bfffe7b8bc00125f15f15a",
-          "headers": {
-            "Host": "lk.nehtar.ru"
-          }
+        "network": "grpc",
+        "security": "reality",
+        "grpcSettings": {
+          "serviceName": "grpc-tunnel",
+          "multiMode": true
         },
-        "tlsSettings": {
-          "serverName": "lk.nehtar.ru",
+        "realitySettings": {
+          "serverName": "blg01.deflink.net",
           "fingerprint": "firefox",
-          "alpn": [
-            "http/1.1"
-          ]
+          "publicKey": "pqZCztpkaSLv6LDBXXoxYRCclCC85M7LfxEAg3-RDDI",
+          "shortId": "844ca9e88fa64958",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"
@@ -322,5 +320,5 @@
       "protocol": "dns"
     }
   ],
-  "remarks": "🇳🇱 Нидерланды | Обход №4"
+  "remarks": "🇵🇱 Польша №2"
 }

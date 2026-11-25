@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.129.100.252",
+            "address": "94.139.255.145",
             "port": 443,
             "users": [
               {
-                "id": "b08606b8-f6f5-4b27-bfeb-174cff2bc562",
+                "id": "a8d0c223-76d6-4f47-bb2f-b922003e04c8",
                 "encryption": "none"
               }
             ]
@@ -294,15 +294,16 @@
         "network": "ws",
         "security": "tls",
         "wsSettings": {
-          "path": "/gateway/v1/ws/35b523d4c5bfffe7b8bc00125f15f15a",
+          "path": "/cart/sync/7yujshBWwwdD",
           "headers": {
-            "Host": "lk.nehtar.ru"
+            "Host": "krepmet.site"
           }
         },
         "tlsSettings": {
-          "serverName": "lk.nehtar.ru",
-          "fingerprint": "edge",
+          "serverName": "krepmet.site",
+          "fingerprint": "chrome",
           "alpn": [
+            "h2",
             "http/1.1"
           ]
         }

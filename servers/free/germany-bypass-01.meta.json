@@ -8,9 +8,9 @@
   "auto": true,
   "generatedBy": "upstream",
   "geoSource": "exit",
-  "sourceHash": "be2a853a355d203dcda8a4247b9971bbdd2680d91dcb33f794e18196a687dc04",
-  "latency": 240,
+  "sourceHash": "6194e3e53113da35d6f35d595fe5438648c368d535cad0dbc9236a9dff9ca68f",
+  "latency": 209,
   "reachable": true,
   "bypassNumber": 1,
-  "source": 5
+  "source": 1
 }
