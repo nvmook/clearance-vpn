@@ -279,32 +279,27 @@
       "settings": {
         "vnext": [
           {
-            "address": "82.148.242.109",
+            "address": "48.102.133.177",
             "port": 443,
             "users": [
               {
-                "id": "83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e",
-                "encryption": "none"
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
-        "security": "tls",
-        "xhttpSettings": {
-          "path": "/api/preview/",
-          "host": "kiln.elvano.website",
-          "mode": "packet-up"
-        },
-        "tlsSettings": {
-          "serverName": "kiln.elvano.website",
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "nehor730.gangtype.com",
+          "fingerprint": "firefox",
+          "publicKey": "HSJUGn3x8tOGS-8PsKu8xgmakV988XKhDGXolBmbj1M",
+          "shortId": "858614add772c0d8",
+          "spiderX": "/"
         }
       },
       "tag": "proxy"

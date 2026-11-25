@@ -279,7 +279,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "136.234.16.199",
+            "address": "109.73.207.225",
             "port": 443,
             "users": [
               {
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "play.robloxfans.fun",
+          "serverName": "games.robloxfans.fun",
           "fingerprint": "firefox",
-          "publicKey": "-C8hJPrwHjokiUeF0glRMng3R5vZUhIN_aVQ1ItQYl8",
-          "shortId": "4c3872a0264f69ae",
+          "publicKey": "KFIPjM9UI5YaPMOKE2oJWg9pO1HD_FlByAwirvVauhA",
+          "shortId": "812e5d00c043b6ec",
           "spiderX": "/"
         }
       },

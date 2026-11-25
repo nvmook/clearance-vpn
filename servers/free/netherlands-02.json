@@ -279,7 +279,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.133.60.12",
+            "address": "178.217.98.60",
             "port": 443,
             "users": [
               {
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "rumicro654.richhoodfoc.com",
+          "serverName": "rumicro749.richhoodfoc.com",
           "fingerprint": "firefox",
-          "publicKey": "h1m6Etk-poZ00pGlXbGhGsSR3x3n1pwWn_mqX1NFiVs",
-          "shortId": "14c8b8dc00ecff22",
+          "publicKey": "stAHGePVvyd7wH5KnYu6I73CjPd49QDnzNf-Ev-juwQ",
+          "shortId": "40638902cebb6be2",
           "spiderX": "/"
         }
       },

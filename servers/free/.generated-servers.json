@@ -1,25 +1,13 @@
 {
   "generated": [
-    "finland-01",
-    "germany-01",
-    "germany-02",
-    "poland-01",
-    "poland-02",
     "netherlands-01",
     "netherlands-02",
     "netherlands-03",
     "netherlands-04",
-    "canada-01",
+    "germany-01",
+    "finland-01",
+    "poland-01",
     "germany-bypass-01",
-    "italy-bypass-01",
-    "netherlands-bypass-01",
-    "poland-bypass-01",
-    "switzerland-bypass-01",
-    "france-01",
-    "france-02",
-    "france-03",
-    "france-04",
-    "france-05",
-    "france-06"
+    "latvia-bypass-01"
   ]
 }

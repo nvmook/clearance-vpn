@@ -279,11 +279,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "48.102.133.140",
+            "address": "5.42.104.42",
             "port": 443,
             "users": [
               {
-                "id": "841a00f9-8f53-40a4-94bb-950470d03a2f",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "lesnaya-masterskaya.duckdns.org",
-          "fingerprint": "firefox",
-          "publicKey": "-qjay03hWiIIofsVHZ_PCpFh_GK-ee99Jtzk9ivsUn0",
-          "shortId": "a03db3a9c86719e4",
+          "serverName": "rugermicro2.gangplatform.com",
+          "fingerprint": "qq",
+          "publicKey": "nPYLh9nRxKK0OQVQrboJyKN4Y3DViI412cbN9Tbz9AQ",
+          "shortId": "53668ac88eefee81",
           "spiderX": "/"
         }
       },

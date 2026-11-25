@@ -279,7 +279,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "141.8.198.29",
+            "address": "195.209.213.70",
             "port": 443,
             "users": [
               {
@@ -295,10 +295,10 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "rusbox634.grizpliz.am",
+          "serverName": "ruhsds597.aidating.am",
           "fingerprint": "firefox",
-          "publicKey": "xPwj2JRpRX0EhUmiJeuii1iMaX1iT2Smq0k5Pyu3hEk",
-          "shortId": "7ce3580ea68cc329",
+          "publicKey": "y3RvS7ce35rCDD85mwXc_jQZ88rQmioWXtPolyk5eCk",
+          "shortId": "0b8a8ce8060f6d38",
           "spiderX": "/"
         }
       },

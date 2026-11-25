@@ -279,28 +279,26 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.139.84.115",
+            "address": "94.183.167.188",
             "port": 443,
             "users": [
               {
-                "id": "ca5b2bab-e5f7-4dd4-a4b7-ebd4a34a02ca",
-                "encryption": "none"
+                "id": "80b3cf20-c77c-4fb9-a69e-55c9dadd58c8",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "tcp",
         "security": "reality",
-        "grpcSettings": {
-          "serviceName": "vless-grpc"
-        },
         "realitySettings": {
-          "serverName": "mhost-pl.zalupa231313.shop",
+          "serverName": "play.3apes.pro",
           "fingerprint": "firefox",
-          "publicKey": "EoeKDsLFEs6F6XMnkQZgvHJ4FfB4s5g0hSP5JE2RCl0",
-          "shortId": "a1b2c3d4",
+          "publicKey": "q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ",
+          "shortId": "",
           "spiderX": "/"
         }
       },

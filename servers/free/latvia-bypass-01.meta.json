@@ -1,0 +1,16 @@
+{
+  "id": "latvia-bypass-01",
+  "name": "🇱🇻 Латвия | Обход №2",
+  "country": "LV",
+  "tier": "free",
+  "kind": "bypass",
+  "enabled": true,
+  "auto": true,
+  "generatedBy": "upstream",
+  "geoSource": "exit",
+  "sourceHash": "fbad9be35c8f40f9adad77ac53a8f944d3e4f5c72b3b109aabf733227f4ebe0a",
+  "latency": 209,
+  "reachable": true,
+  "bypassNumber": 2,
+  "source": 1
+}
