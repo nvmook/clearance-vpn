@@ -2,12 +2,22 @@
   "free": {
     "name": "Free",
     "description": "Бесплатный доступ к ClearanceVPN",
-    "devices": 3
+    "devices": 3,
+    "features": [
+      "Бесплатные серверы",
+      "Один обход",
+      "До {devices} устройств"
+    ]
   },
   "premium": {
     "name": "Premium",
     "description": "Расширенный доступ к ClearanceVPN",
-    "devices": 5
+    "devices": 5,
+    "features": [
+      "Все серверы, включая Hysteria",
+      "Все обходы",
+      "До {devices} устройств"
+    ]
   },
   "trial": {
     "name": "Premium Trial",

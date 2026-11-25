@@ -384,13 +384,31 @@ function parseUri(line) {
     return { name:safeDecode(hash.join("#")) || url.hostname, outbound:{ protocol:"shadowsocks", settings:{ servers:[{ address:url.hostname, port:Number(url.port), method:user.slice(0,sep), password:user.slice(sep+1) }] } } };
   }
   if (!["vless","trojan","hysteria2","hy2"].includes(scheme)) throw new Error(`Неподдерживаемый URI: ${scheme}`);
+  if (scheme === "hysteria2" || scheme === "hy2") return parseHysteria2(line);
   const url = new URL(line); const p = url.searchParams; const host = url.hostname; const port = Number(url.port || 443);
   const network = p.get("type") || "tcp"; const security = p.get("security") || (["trojan","hysteria2","hy2"].includes(scheme) ? "tls" : "none");
   const stream = makeStream(network, security, { sni:p.get("sni"), host:p.get("host"), path:p.get("path"), fp:p.get("fp"), pbk:p.get("pbk"), sid:p.get("sid"), spx:p.get("spx"), pqv:p.get("pqv"), serviceName:p.get("serviceName"), authority:p.get("authority"), mode:p.get("mode"), extra:p.get("extra"), alpn:p.get("alpn"), headerType:p.get("headerType"), seed:p.get("seed"), allowInsecure:p.get("allowInsecure") || p.get("insecure"), pcs:p.get("pcs"), ech:p.get("ech") }, host);
   const name = safeDecode(url.hash.slice(1)) || host;
   if (scheme === "vless") { const user = { id:safeDecode(url.username), encryption:p.get("encryption") || "none" }; if (p.get("flow")) user.flow = p.get("flow"); return { name, outbound:{ protocol:"vless", settings:{ vnext:[{ address:host, port, users:[user] }] }, streamSettings:stream } }; }
   if (scheme === "trojan") return { name, outbound:{ protocol:"trojan", settings:{ servers:[{ address:host, port, password:safeDecode(url.username) }] }, streamSettings:stream } };
-  return { name, outbound:{ protocol:"hysteria2", settings:{ servers:[{ address:host, port, password:safeDecode(url.username) }] }, streamSettings:stream } };
+  throw new Error(`Неподдерживаемый URI: ${scheme}`);
+}
+// Xray describes Hysteria 2 as protocol "hysteria" (settings.version 2) with the "hysteria" transport.
+function parseHysteria2(line) {
+  const url = new URL(line.replace(/^hy2:/i, "hysteria2:")); const p = url.searchParams; const host = url.hostname;
+  const port = Number(url.port || 443);
+  if (!host || !Number.isInteger(port) || port <= 0 || port > 65535) throw new Error("Некорректный Hysteria2 URI");
+  const auth = safeDecode(url.username) + (url.password ? `:${safeDecode(url.password)}` : "");
+  const tlsSettings = { serverName: p.get("sni") || host, fingerprint: p.get("fp") || "chrome", alpn: p.get("alpn") ? String(p.get("alpn")).split(",") : ["h3"] };
+  if (truthyParam(p.get("insecure") || p.get("allowInsecure"))) tlsSettings.allowInsecure = true;
+  const pin = p.get("pinSHA256") || p.get("pcs"); if (pin) tlsSettings.pinnedPeerCertSha256 = String(pin).replace(/:/g, "").toLowerCase();
+  const streamSettings = { network: "hysteria", security: "tls", tlsSettings, hysteriaSettings: { version: 2, auth } };
+  if (String(p.get("obfs") || "").toLowerCase() === "salamander" && p.get("obfs-password")) streamSettings.udpmasks = [{ type: "salamander", settings: { password: p.get("obfs-password") } }];
+  return { name: safeDecode(url.hash.slice(1)) || host, outbound: { protocol: "hysteria", settings: { version: 2, address: host, port }, streamSettings } };
+}
+function isHysteriaOutbound(o) {
+  const protocol = String(o?.protocol || "").toLowerCase();
+  return protocol === "hysteria" || protocol === "hysteria2" || String(o?.streamSettings?.network || "").toLowerCase() === "hysteria";
 }
 function truthyParam(v) { return v === true || /^(?:1|true|yes)$/i.test(String(v ?? "")); }
 function parseJsonParam(v) { if (!v) return undefined; const text = String(v).trim(); for (const candidate of [text, safeDecode(text)]) { try { const value = JSON.parse(candidate); if (value && typeof value === "object") return value; } catch {} } return undefined; }
@@ -692,33 +710,61 @@ async function run() {
   });
   const manualVerified = CONFIG.health?.validateManual === false ? manual : await dropDeadProfiles(manual.filter((p) => !keep.has(p.id)), "ручной", checks);
   const byId = new Map(manualVerified.map((p) => [p.id,p])); for (const p of generated) byId.set(p.id,p);
-  const profiles = [...byId.values()]; const autoResult = cleanTemplateForAuto(template,profiles); autoResult.config.remarks = autoMeta.name || "🇪🇺 ⚡ Авто-выбор"; writeJson(AUTO_PATH,autoResult.config);
-  const sortedFree = sortProfiles([...profiles.filter((p) => p.id !== "auto"),{id:"auto",config:autoResult.config,meta:autoMeta}],CONFIG.servers?.freeOrder || []);
+  const profiles = [...byId.values()];
+  const premiumAll = loadPremium();
+  const premiumChecked = CONFIG.health?.validateManual === false ? premiumAll : await dropDeadProfiles(premiumAll, "premium", checks);
+
+  // Tiers. Premium gets everything. Free gets no Hysteria servers and only a limited number of
+  // bypass servers (config.json -> tiers.free.hysteria / tiers.free.maxBypass, default: none / 1).
+  const freeRules = { hysteria: CONFIG.tiers?.free?.hysteria === true, maxBypass: Math.max(0, Number(CONFIG.tiers?.free?.maxBypass ?? 1)) };
   const isBypassName = (name) => isBypassClass(classifyName(name || ""));
   const isBypassProfile = (p) => p.id !== "auto" && p.id !== "tech" && (p.meta?.kind === "bypass" || (p.meta?.generatedBy !== "upstream" && isBypassName(p.meta?.name)));
-  const bypassRank = (p) => (p.meta?.generatedBy === "upstream" ? p.meta.bypassNumber || 0 : 1e6 + sortedFree.indexOf(p));
-  // Final order: tech, ⬇️ АВТО ВЫБОР ⬇️, AUTO, ⬇️ СКОРОСТНЫЕ СЕРВЕРА ⬇️, servers, ⬇️ ОБХОДЫ ⬇️, bypasses.
-  // A header is added only when there is something under it.
-  const bypassList = sortedFree.filter(isBypassProfile).sort((x, y) => bypassRank(x) - bypassRank(y));
-  const normalList = sortedFree.filter((p) => !isBypassProfile(p));
-  const techList = normalList.filter((p) => p.id === "tech");
-  const autoList = normalList.filter((p) => p.id === "auto");
-  const regularList = normalList.filter((p) => p.id !== "tech" && p.id !== "auto");
+  const isHysteriaProfile = (p) => isHysteriaOutbound(primaryOutbound(p.config));
+  // the best bypass server: lowest measured latency, then the source order
+  const bypassBest = (x, y) => (x.meta?.latency ?? 1e9) - (y.meta?.latency ?? 1e9) || (x.meta?.bypassNumber || 1e6) - (y.meta?.bypassNumber || 1e6);
+  const freeBypass = new Set(profiles.filter((p) => isBypassProfile(p) && !isHysteriaProfile(p)).sort(bypassBest).slice(0, freeRules.maxBypass).map((p) => p.id));
+  const freeProfiles = profiles.filter((p) => (freeRules.hysteria || !isHysteriaProfile(p)) && (!isBypassProfile(p) || freeBypass.has(p.id)));
+  const premiumProfiles = [...new Map([...profiles, ...premiumChecked].map((p) => [p.id, p])).values()];
+
+  // AUTO is built per tier: the Free AUTO must not contain servers that Free does not get.
+  const autoName = autoMeta.name || "🇪🇺 ⚡ Авто-выбор";
+  const freeAuto = cleanTemplateForAuto(template, freeProfiles); freeAuto.config.remarks = autoName; writeJson(AUTO_PATH, freeAuto.config);
+  const premiumAuto = cleanTemplateForAuto(template, premiumProfiles); premiumAuto.config.remarks = autoName;
+
   // Headers are on by default; "separators": false in config.json switches them off (Happ pings
   // every profile, so a header always shows "н/д" there).
   const header = (key, show) => (show && CONFIG.separators !== false ? [loadSeparator(key)].filter(Boolean) : []);
-  const free = [
-    ...techList,
-    ...header("auto", autoList.length > 0), ...autoList,
-    ...header("fast", regularList.length > 0), ...regularList,
-    ...header("bypass", bypassList.length > 0), ...bypassList
-  ];
-  const premiumAll = loadPremium();
-  const premiumChecked = CONFIG.health?.validateManual === false ? premiumAll : await dropDeadProfiles(premiumAll, "premium", checks);
-  const premium = sortProfiles(premiumChecked,CONFIG.servers?.premiumOrder || []);
+  // Final order: tech, ⬇️ АВТО ВЫБОР ⬇️, AUTO, ⬇️ СКОРОСТНЫЕ СЕРВЕРА ⬇️, servers (Hysteria last),
+  // ⬇️ ОБХОДЫ ⬇️, bypasses. A header is added only when there is something under it.
+  // Bypass names are numbered inside each list ("Обход №1" is the first one the user sees).
+  const assemble = (list, autoResult, order) => {
+    const sorted = sortProfiles([...list.filter((p) => p.id !== "auto"), { id: "auto", config: autoResult.config, meta: autoMeta }], order);
+    const bypassRank = (p) => (p.meta?.generatedBy === "upstream" ? p.meta.bypassNumber || 0 : 1e6 + sorted.indexOf(p));
+    const bypassList = sorted.filter(isBypassProfile).sort((x, y) => bypassRank(x) - bypassRank(y));
+    const normalList = sorted.filter((p) => !isBypassProfile(p));
+    const techList = normalList.filter((p) => p.id === "tech");
+    const autoList = normalList.filter((p) => p.id === "auto");
+    const rest = normalList.filter((p) => p.id !== "tech" && p.id !== "auto");
+    const regularList = [...rest.filter((p) => !isHysteriaProfile(p)), ...rest.filter(isHysteriaProfile)];
+    let n = 0;
+    const numbered = bypassList.map((p) => {
+      if (p.meta?.generatedBy !== "upstream") return p;
+      const base = String(p.meta.name || "").replace(/\s*№\s*\d+\s*$/u, "");
+      return { ...p, config: { ...p.config, remarks: `${base} №${++n}` } };
+    });
+    return [
+      ...techList,
+      ...header("auto", autoList.length > 0), ...autoList,
+      ...header("fast", regularList.length > 0), ...regularList,
+      ...header("bypass", numbered.length > 0), ...numbered
+    ];
+  };
+  const free = assemble(freeProfiles, freeAuto, CONFIG.servers?.freeOrder || []);
+  const premium = assemble(premiumProfiles, premiumAuto, CONFIG.servers?.premiumOrder || CONFIG.servers?.freeOrder || []);
+  const autoResult = freeAuto;
   writeJson(path.join(OUTPUT_DIR,"free.json"),free.map((x) => x.config)); writeJson(path.join(OUTPUT_DIR,"premium.json"),premium.map((x) => x.config));
   if (STATS.placeholderDropped) console.log(`Отброшено заглушек (127.0.0.1, 0000, порт 0): ${STATS.placeholderDropped}`);
   for (const x of generated) console.log(`  • ${x.id}: ${x.meta.name} [страна: ${x.meta.geoSource}${x.meta.reachable === undefined ? "" : x.meta.reachable ? ", отвечает" : ", не отвечает"}${x.meta.source ? `, источник ${x.meta.source}` : ""}]`);
-  console.log(`Узлов из источника: ${generated.length}`); console.log(`Узлов в AUTO: ${autoResult.tags.length}`); console.log(`Free-профилей: ${free.filter((x) => !x.separator).length} (+ заголовков: ${free.filter((x) => x.separator).length})`); console.log(`Premium-профилей: ${premium.length}`); console.log("Генерация завершена.");
+  console.log(`Узлов из источника: ${generated.length}`); console.log(`Узлов в AUTO: Free ${freeAuto.tags.length}, Premium ${premiumAuto.tags.length}`); console.log(`Free-профилей: ${free.filter((x) => !x.separator).length} (+ заголовков: ${free.filter((x) => x.separator).length})`); console.log(`Premium-профилей: ${premium.filter((x) => !x.separator).length} (+ заголовков: ${premium.filter((x) => x.separator).length}; из них Hysteria: ${premium.filter((x) => !x.separator && isHysteriaProfile(x)).length}, обходов: ${premium.filter((x) => !x.separator && isBypassProfile(x)).length}). В Free не попало: Hysteria ${profiles.filter(isHysteriaProfile).length}, обходов ${profiles.filter(isBypassProfile).length - freeBypass.size}.`); console.log("Генерация завершена.");
 }
 run().catch((error) => { console.error(`Ошибка генерации: ${error.message}`); process.exitCode = 1; });

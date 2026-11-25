@@ -109,5 +109,31 @@
   "devices": {
     "requireHwid": true,
     "touchIntervalSeconds": 300
+  },
+  "premium": {
+    "trial": {
+      "enabled": true,
+      "days": 3
+    },
+    "options": [
+      {
+        "id": "week",
+        "label": "1 неделя",
+        "days": 7,
+        "stars": 1
+      },
+      {
+        "id": "month",
+        "label": "1 месяц",
+        "days": 30,
+        "stars": 1
+      },
+      {
+        "id": "quarter",
+        "label": "3 месяца",
+        "days": 90,
+        "stars": 1
+      }
+    ]
   }
 }

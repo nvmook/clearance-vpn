@@ -9,6 +9,15 @@ import {
   handleRestoreDevice
 } from "./handlers/devices.js";
 
+import {
+  showPremium,
+  handleBuyPremium,
+  handleTrialPremium,
+  handlePreCheckout,
+  handleSuccessfulPayment,
+  handlePaySupport
+} from "./handlers/premium.js";
+
 import { handleStart } from "./handlers/start.js";
 import { handleSubscription } from "./handlers/subscription.js";
 import { getMainKeyboard } from "./keyboards/main.js";
@@ -64,18 +73,6 @@ function getBackKeyboard() {
   };
 }
 
-async function showPremium(callbackQuery) {
-  await showTextSection(
-    callbackQuery,
-    "💎 Premium\n\n" +
-      "⭐ Больше возможностей\n" +
-      "📡 Premium-серверы\n" +
-      "📱 Расширенный лимит устройств\n\n" +
-      "Покупка Premium скоро будет доступна.",
-    getBackKeyboard()
-  );
-}
-
 async function showStats(callbackQuery) {
   await showTextSection(
     callbackQuery,
@@ -96,7 +93,24 @@ async function showHelp(callbackQuery) {
 export async function handleUpdate(update) {
   const config = getConfig();
 
+  // Payments are handled before the maintenance check: a user who already paid must get Premium,
+  // and Telegram cancels a payment that is not confirmed within 10 seconds.
+  if (update?.pre_checkout_query) {
+    await handlePreCheckout(update.pre_checkout_query);
+    return;
+  }
+
+  if (update?.message?.successful_payment) {
+    await handleSuccessfulPayment(update.message);
+    return;
+  }
+
   if (update?.message) {
+    if (/^\/paysupport(@\w+)?(\s|$)/.test(update.message.text || "")) {
+      await handlePaySupport(update.message);
+      return;
+    }
+
     if (/^\/start(@\w+)?(\s|$)/.test(update.message.text || "")) {
       await handleStart(
         update.message,
@@ -168,8 +182,17 @@ export async function handleUpdate(update) {
   }
 
   if (data === "premium") {
-    await answerCallback(callbackQuery.id);
     await showPremium(callbackQuery);
+    return;
+  }
+
+  if (data.startsWith("buy_premium:")) {
+    await handleBuyPremium(callbackQuery, data.slice("buy_premium:".length));
+    return;
+  }
+
+  if (data === "trial_premium") {
+    await handleTrialPremium(callbackQuery);
     return;
   }
 

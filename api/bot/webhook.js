@@ -27,9 +27,16 @@ export default async function handler(req, res) {
       ok: true
     });
   } catch (error) {
-    // Always ack with 200: on a non-2xx Telegram re-sends the same update
-    // over and over, so one bad update would block the bot.
     console.error("Bot error:", error);
+
+    // A payment that could not be processed must be re-sent by Telegram (the handler is
+    // idempotent), so only that case answers with an error. Everything else is acknowledged,
+    // otherwise one bad update would block the bot.
+    if (req.body?.message?.successful_payment) {
+      return res.status(500).json({
+        ok: false
+      });
+    }
 
     return res.status(200).json({
       ok: false

@@ -9,6 +9,7 @@ import {
   getDeviceSettings
 } from "../../lib/config.js";
 import { resolvePlan } from "../../lib/plans.js";
+import { hadPremium } from "../../lib/subscriptions.js";
 import {
   checkDeviceAccess,
   getDeviceName,
@@ -206,10 +207,14 @@ export default async function handler(req, res) {
       });
     }
 
-    if (tokenInfo.plan !== type) {
-      return res.status(403).json({
-        error:
-          "Token does not have access to this subscription"
+    // Only the link of the user's CURRENT plan works: while Premium is active the Free link
+    // answers 404 (nothing is deleted, the token stays the same), and when Premium ends the
+    // Free link works again. A link of the other plan is simply "not found".
+    const planType = tokenInfo.plan === "premium" ? "premium" : "free";
+
+    if (type !== planType) {
+      return res.status(404).json({
+        error: "Subscription not found"
       });
     }
 
@@ -247,9 +252,18 @@ export default async function handler(req, res) {
         });
 
         if (access.decision !== "ok") {
+          // Free again after Premium, with more devices than Free allows: say that the
+          // subscription has ended instead of a plain "limit reached".
+          const stub =
+            access.decision === "limit" &&
+            planType === "free" &&
+            (await hadPremium(tokenInfo.user_id))
+              ? "ended"
+              : access.decision;
+
           return sendSubscription(req, res, {
-            type,
-            content: stubContent(access.decision),
+            type: planType,
+            content: stubContent(stub),
             expire
           });
         }
@@ -259,7 +273,7 @@ export default async function handler(req, res) {
     const filePath = path.join(
       process.cwd(),
       "output",
-      `${type}.json`
+      `${planType}.json`
     );
 
     if (!fs.existsSync(filePath)) {
@@ -274,7 +288,7 @@ export default async function handler(req, res) {
     );
 
     return sendSubscription(req, res, {
-      type,
+      type: planType,
       content,
       expire
     });
